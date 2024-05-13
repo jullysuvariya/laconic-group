@@ -20,7 +20,7 @@ const ProductRow = (props: ProductRowProps) => {
                 <img alt={"product image"} className="h-full object-contain rounded-2xl" src={props.image}/>
             </div>
             <div className="w-3/5 flex flex-col p-20 justify-center gap-16 bg-gray-200 rounded-2xl my-10 h-full">
-                <div className="text-6xl flex flex-col">
+                <div className="text-6xl flex flex-col gap-2">
                     <p className="font-bold">{props.title}</p>
                     <p className="font-thin">{props.subtitle}</p>
                 </div>

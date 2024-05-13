@@ -2,46 +2,126 @@ import Image from "next/image";
 import Header from "@/components/Header"
 import ImageCarousel from "@/components/ImageCarousel";
 import ProductRow from "@/components/ProductRow";
+import React from "react";
+import AboutUs from "@/components/AboutUs";
+import GroupOfCompanies from "@/components/GroupOfCompanies";
+import CompanyPurpose from "@/components/CompanyPurpose";
+import Footer from "@/components/Footer";
 
 const PRODUCTS = [
     {
         "title": "Premium Tiles",
         "subtitle": "Collection",
-        "description": "A collection that adds a dash of luxury to every corner of your space and sets a" +
-            " mood of tranquility because of its soothing and luxurious appeal. The Collection is filled " +
-            "with premium patterns that are guaranteed to enrich your space.",
+        "description": "Add timeless elegance to your space with the Tiles Collection, a fine blend of traditional " +
+            "methods and modern designs that adds a sturdy element of amazement! Add a piece of natural beauty and " +
+            "enhance its aura! Redefine the Luxury with Laconic Ceramic",
         "image": "/marble.jpeg",
-        "sizes": ["80x240cm (15mm)", "80x160cm (9mm)", "60x60cm", "60x120cm", "20x120cm", "120X180cm"],
+        "sizes": ["300x300mm", "300x600mm", "600x600mm", "800x800mm", "600x1200mm", "600x1800mm", "800x1200mm",
+            "800x1600mm", "1000x1000mm", "1200x1200mm", "1200x1800mm", "1200x2400mm"],
         "linkHref": "https://laconicceramic.com/",
         "linkText": "Visit Laconic Ceramic",
-        "reverseRow": false
     },
     {
-        "title": "Premium Papers",
+        "title": "SPC Vinyl Flooring",
         "subtitle": "Collection",
-        "description": "A collection that adds a dash of luxury to every corner of your space and sets a" +
-            " mood of tranquility because of its soothing and luxurious appeal. The Collection is filled " +
-            "with premium patterns that are guaranteed to enrich your space.",
+        "description": "Give areas with high footfall a shield of story creations that are elegant in appeal and " +
+            "durable in property with our Essential SPC Flooring Collection! Embrace ordinary spaces with extraordinary " +
+            "surfaces with Laconic Surfaces!",
         "image": "/marble.jpeg",
-        "sizes": ["80x240cm (15mm)", "80x160cm (9mm)", "60x60cm", "60x120cm", "20x120cm", "120X180cm"],
+        "sizes": ["181x1220mm", "230x1220mm", "230x1524mm", "310x601mm"],
         "linkHref": "https://www.enrichpapers.com/",
         "linkText": "Visit Enrich Papers",
-        "reverseRow": true
+    },
+    {
+        "title": "Building Materials",
+        "subtitle": "Collection",
+        "description": "Add motifs of inspiration to your everyday routine with our Premium Bathware Collection that " +
+            "keeps you shielded while serving an aesthetic look. Elevate your bath ware experiences to a distinguished" +
+            " height with our premium ranges.",
+        "image": "/marble.jpeg",
+        "sizes": ["181x1220mm", "230x1220mm", "230x1524mm", "310x601mm"],
+        "linkHref": "https://www.enrichpapers.com/",
+        "linkText": "Visit Enrich Papers",
+    },
+    {
+        "title": "Paper & Paperboards",
+        "subtitle": "Collection",
+        "description": "Finding A Permanent Paper Solution Is Our Ultimate Goal! We are the industry leaders and " +
+            "provides the most reliable and sustainable solution for all Your Paper & Paperboards Requirements",
+        "image": "/marble.jpeg",
+        "sizes": ["Duplex Boards (CCNB)", "Triplex Boards (Whiteback)", "Testliner & Fluting Paper",
+            "Kraft Paper Boards", "MG Poster", "Tissue Paper"],
+        "linkHref": "https://www.enrichpapers.com/",
+        "linkText": "Visit Enrich Papers",
+    },
+    {
+        "title": "Biowares & Sustainable Products",
+        "subtitle": "Collection",
+        "description": "Laconic is more than just a brand; it's a commitment to a greener, more sustainable world. " +
+            "Founded on the principles of eco-friendliness and quality, we are dedicated to crafting biodegradable " +
+            "and compostable tableware that not only elevates your dining experience but also reduces environmental impact",
+        "image": "/marble.jpeg",
+        "sizes": ["Bagasse Plates", "Bagasse Bowls", "Bagasse Compartment Plates", "Bagasse Takeaway Clamshell",
+            "Bagasse Food Container", "Paper Cups & Bowls"],
+        "linkHref": "https://www.enrichpapers.com/",
+        "linkText": "Visit Enrich Papers",
+    },
+    {
+        "title": "Polypack Products",
+        "subtitle": "Collection",
+        "description": "The company is backed by superior infrastructure, young & dynamic management, skilled & " +
+            "dedicated workforce, and grit to be a market leader in the Polypack industry. Our quality PP woven" +
+            " products are widely known for their remarkable properties like durability, high wearing & tearing " +
+            "strength, smooth finishes, and competitive rates. Our products are extensively used for storing and" +
+            " transporting numerous contents.",
+        "image": "/marble.jpeg",
+        "sizes": ["PP Woven Fabric", "PP Bags", "PP Sacks", "PP Rope & Twine", "FIBC Bags", "Fishing Net", "PVC Chairs & Tables"],
+        "linkHref": "https://www.enrichpapers.com/",
+        "linkText": "Visit Enrich Papers",
+    },
+    {
+        "title": "Industrial Machinery & Equipments",
+        "subtitle": "Collection",
+        "description": "Tingenious offerings that we put forward under the brand name which find wide applications in" +
+            " areas where the pneumatic air products are required. Thus, we cater to the requirements of a number of" +
+            " Engineering Colleges, Government Sector, Oil Mills, Cement Industry, Ceramic Industry, Sugar Industry," +
+            " Forging Plants, Thermal Power Stations, Petroleum Plants, Cotton Ginning Units, Kitchenware units," +
+            " Garage units, Automobile parts units, Embroidery units, Agricultural land, and several small & medium" +
+            " industries in India and overseas.",
+        "image": "/marble.jpeg",
+        "sizes": ["Air Compressors", "High Pressure Pumps", "Slotting Machines", "Heavy Duty Grinders & Polishers",
+            "Centrifugal Blowers", "Coolant Pumps", "Burner", "Switch Boards", "Electric Motors", "Welding Machines",
+            "Lathe Machines", "Drill Machines"],
+        "linkHref": "https://www.enrichpapers.com/",
+        "linkText": "Visit Enrich Papers",
+    },
+    {
+        "title": "Electrical Appliances",
+        "subtitle": "Collection",
+        "description": "We has woven a tapestry of trust with its customers, offering state-of-the-art electrical " +
+            "lifestyle solutions that make their life simple and experiences better. Trust is our currency, earned " +
+            "through years of dedicated service and a commitment to excellence. With millions of satisfied customers" +
+            " worldwide, we've become synonymous with reliability and quality that stands the test of time.",
+        "image": "/marble.jpeg",
+        "sizes": ["Fans", "Heater", "LED Lightings", "Iron & Kettle", "MCB & ELCB", "Electric Wires & Cables"],
+        "linkHref": "https://www.enrichpapers.com/",
+        "linkText": "Visit Enrich Papers",
     },
 ]
-
 
 export default function Home() {
     return (
         <div className="flex flex-col justify-between">
-            <header className="fixed top-0 z-10 bg-black bg-opacity-40 py-6 px-20 w-full">
+            <header>
                 <Header/>
             </header>
             <main>
                 <section className="relative h-screen">
                     <ImageCarousel/>
                 </section>
-                {PRODUCTS.map((product) => {
+                <AboutUs/>
+                <GroupOfCompanies/>
+                {PRODUCTS.map((product, index: number) => {
                     return <section className="relative h-screen" key={product.title}>
                         <ProductRow
                             key={product.title}
@@ -52,10 +132,12 @@ export default function Home() {
                             sizes={product.sizes}
                             linkHref={product.linkHref}
                             linkText={product.linkText}
-                            reverseRow={product.reverseRow}
+                            reverseRow={index % 2 == 1}
                         />
                     </section>
                 })}
+                <CompanyPurpose />
+                <Footer />
             </main>
         </div>
     );

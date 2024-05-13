@@ -7,35 +7,28 @@ import Image from "next/image";
 
 const Header = () => {
     return (
-        <Navbar>
+        <Navbar className="fixed top-0 z-10 bg-black bg-opacity-30 py-6 px-32 w-full">
             <NavbarBrand>
-                <Image alt="laconic brand logo" src="/laconic_logo.svg" height={124} width={256}/>
+                <Image alt="laconic brand logo" src="/logo.png" height={124} width={256}/>
             </NavbarBrand>
-            <NavbarContent className="hidden sm:flex gap-4" justify="center">
+            <NavbarContent justify="end" className="hidden sm:flex gap-8 text-white">
                 <NavbarItem>
                     <Link color="foreground" href="#">
-                        Features
-                    </Link>
-                </NavbarItem>
-                <NavbarItem isActive>
-                    <Link href="#" aria-current="page">
-                        Customers
+                        About
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
                     <Link color="foreground" href="#">
-                        Integrations
+                        Products
                     </Link>
                 </NavbarItem>
-            </NavbarContent>
-            <NavbarContent justify="end">
-                <NavbarItem className="hidden lg:flex">
-                    <Link href="#">Login</Link>
-                </NavbarItem>
                 <NavbarItem>
-                    <Button as={Link} color="primary" href="#" variant="flat">
-                        Sign Up
-                    </Button>
+                    <Link color="foreground" href="#">
+                        Contact
+                    </Link>
+                </NavbarItem>
+                <NavbarItem className="hidden lg:flex px-6 py-3 rounded-xl bg-sky-700">
+                    <Link href="#">CALL US</Link>
                 </NavbarItem>
             </NavbarContent>
         </Navbar>
