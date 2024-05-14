@@ -2,7 +2,7 @@
   <defs>
     <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#00b2e6"/>
-      <stop offset="1" stop-color="#2cbfcd"/>
+      <stop offset="1" stop-color="#0086a3"/>
     </linearGradient>
   </defs>
   <g id="Group_2735" data-name="Group 2735" transform="translate(-964 -2770)">

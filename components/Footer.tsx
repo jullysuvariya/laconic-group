@@ -8,7 +8,7 @@ const Footer = () => {
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
-            <div className="mx-auto max-w-7xl px-8 py-16 sm:py-24 lg:px-8 lg:py-32">
+            <div className="mx-auto max-w-7xl px-8 py-16 sm:py-24 lg:px-8 lg:py-20">
                 <div className="xl:grid xl:grid-cols-6 xl:gap-8">
                     <img
                         className="w-1/2 xl:col-span-3"
@@ -21,10 +21,10 @@ const Footer = () => {
                                 <h3 className="font-semibold leading-6 text-gray-900">CONTACT US</h3>
                                 <div className="mt-6 space-y-4">
                                     {navigation.contact.map((item, index) => (
-                                        <div className="flex flex-row gap-4" key={index}>
+                                        <a href={item.href} target={"_blank"} className="flex flex-row gap-4" key={index}>
                                             {item.icon}
                                             {item.description}
-                                        </div>
+                                        </a>
                                     ))}
                                 </div>
                             </div>
@@ -36,6 +36,7 @@ const Footer = () => {
                                     {navigation.social.map((item, index) => (
                                         <a href={item.href}
                                            key={index}
+                                           target={"_blank"}
                                            className="text-xl text-gray-600 hover:text-gray-900">
                                             {item.icon}
                                         </a>
@@ -56,17 +57,30 @@ const navigation = {
             icon: <MdLocationOn className="w-8 h-8"/>,
             description: <p className="text-sm">
                 <strong>Corporate Office</strong> 525, Nakshtra VIII, Sadhu Vasvani Road, Rajkot - 360005.
-            </p>
+            </p>,
+            href: "https://maps.app.goo.gl/brrKRHg4xWnQoBX68"
         },
-        {icon: <MdAddIcCall className="w-5 h-5"/>, description: <p className="text-sm">+91 94296 53388</p>},
-        {icon: <MdEmail className="w-5 h-5"/>, description: <p className="text-sm">info@laconicceramic.com</p>},
-        {icon: <MdEmail className="w-5 h-5"/>, description: <p className="text-sm">export@laconicceramic.com</p>},
+        {
+            icon: <MdAddIcCall className="w-5 h-5"/>,
+            description: <p className="text-sm">+91 94296 53388</p>,
+            href: "tel:919429653388"
+        },
+        {
+            icon: <MdEmail className="w-5 h-5"/>,
+            description: <p className="text-sm">info@laconicceramic.com</p>,
+            href: "mailto:info@laconicceramic.com"
+        },
+        {
+            icon: <MdEmail className="w-5 h-5"/>,
+            description: <p className="text-sm">export@laconicceramic.com</p>,
+            href: "mailto:export@laconicceramic.com"
+        },
     ],
     social: [
-        {icon: <FaFacebookF/>, href: '#'},
-        {icon: <FaWhatsapp/>, href: '#'},
-        {icon: <FaInstagram/>, href: '#'},
-        {icon: <FaLinkedinIn/>, href: '#'},
+        {icon: <FaFacebookF/>, href: 'https://www.facebook.com/profile.php?id=61555548309435'},
+        {icon: <FaWhatsapp/>, href: 'https://wa.me/919429653388?text=I\'m%20interested%20in%20your%20products'},
+        {icon: <FaInstagram/>, href: 'https://www.instagram.com/laconic_ceramic'},
+        {icon: <FaLinkedinIn/>, href: 'https://www.linkedin.com/company/laconic-ceramics/'},
     ],
 }
 

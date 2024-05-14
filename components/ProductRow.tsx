@@ -41,7 +41,7 @@ const ProductRow = (props: ProductRowProps) => {
                 <Link
                     target='_blank'
                     rel="noopener noreferrer"
-                    className="text-xl hover:underline flex items-center gap-2 text-primary hover:text-blue-900"
+                    className="text-xl hover:underline flex items-center gap-2 text-primary"
                     href={props.linkHref}
                 >
                     {props.linkText}

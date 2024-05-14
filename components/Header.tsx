@@ -28,7 +28,7 @@ const Header = () => {
                     </Link>
                 </NavbarItem>
                 <NavbarItem className="hidden lg:flex px-6 py-3 text-white rounded-xl bg-primary">
-                    <Link href="#">CALL US</Link>
+                    <Link href="tel:919429653388">CALL US</Link>
                 </NavbarItem>
             </NavbarContent>
         </Navbar>
