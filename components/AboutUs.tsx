@@ -1,7 +1,7 @@
 const AboutUs = () => {
     return (
         <div className="flex flex-col h-screen p-32 justify-center text-2xl gap-8">
-            <h1 className="text-6xl self-center  mb-16 text-center border-b-4 border-sky-700 pb-8 px-10">Legacy of Excellence</h1>
+            <h1 className="text-6xl self-center  mb-16 text-center border-b-4 border-primary pb-8 px-10">Legacy of Excellence</h1>
             <p>
                 <strong>30+ Years</strong> Of Excellence With Quality At It&lsquo;s Best! The core area business of
                 <strong> Laconic Inc</strong> is one of the part of the <strong>Laconic Group of Companies</strong> which
@@ -15,7 +15,7 @@ const AboutUs = () => {
             <p>
                 <strong>
                     <i>
-                        “Our World Class Production units are equipped with cutting edge European Technology to Match
+                        “Our World Class Production units are equipped with cutting edge Modern Technology to Match
                         Global Standards”
                     </i>
                 </strong>
