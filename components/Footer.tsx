@@ -19,7 +19,7 @@ const Footer = () => {
                         <h3 className="max-lg:text-center font-semibold leading-6 text-gray-900">CONTACT US</h3>
                         <div className="mt-6 space-y-4">
                             {navigation.contact.map((item, index) => (
-                                <a href={item.href} target={"_blank"} className="flex flex-row gap-4" key={index}>
+                                <a href={item.href} target={"_blank"} className="flex flex-row gap-4 items-center" key={index}>
                                     {item.icon}
                                     {item.description}
                                 </a>
@@ -48,24 +48,24 @@ const Footer = () => {
 const navigation = {
     contact: [
         {
-            icon: <MdLocationOn className="w-8 h-8"/>,
+            icon: <MdLocationOn className="flex-shrink-0 w-5 h-5"/>,
             description: <p className="text-sm">
                 <strong>Corporate Office</strong> 525, Nakshtra VIII, Sadhu Vasvani Road, Rajkot - 360005.
             </p>,
             href: "https://maps.app.goo.gl/brrKRHg4xWnQoBX68"
         },
         {
-            icon: <MdAddIcCall className="w-5 h-5"/>,
+            icon: <MdAddIcCall className="flex-shrink-0 w-5 h-5"/>,
             description: <p className="text-sm">+91 94296 53388</p>,
             href: "tel:919429653388"
         },
         {
-            icon: <MdEmail className="w-5 h-5"/>,
+            icon: <MdEmail className="flex-shrink-0 w-5 h-5"/>,
             description: <p className="text-sm">info@laconicceramic.com</p>,
             href: "mailto:info@laconicceramic.com"
         },
         {
-            icon: <MdEmail className="w-5 h-5"/>,
+            icon: <MdEmail className="flex-shrink-0 w-5 h-5"/>,
             description: <p className="text-sm">export@laconicceramic.com</p>,
             href: "mailto:export@laconicceramic.com"
         },
