@@ -1,6 +1,6 @@
 const Card = ({title, description, icon}: { title: string, description: string, icon: string }) => {
     return (
-        <li key={title} className="flex items-center flex-col rounded-2xl border-primary border px-20 py-14">
+        <li key={title} className="flex items-center flex-col rounded-2xl border-primary border px-8 lg:px-20 py-14">
             <img className="mx-auto h-20 w-20 lg:h-20 lg:w-20 -mt-24 rounded-full" src={icon} alt=""/>
             <h3 className="my-6 text-center font-semibold leading-7 text-2xl tracking-tight">{title}</h3>
             {description.split("\n").map((line, index) => {
