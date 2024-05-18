@@ -16,15 +16,15 @@ const ImageCarousel = () => {
             dynamicHeight={true}
             interval={2000}
         >
-            <div className="h-screen">
+            <div className="h-96 lg:h-screen">
                 <Image alt={"slider image 1"} src="/slider1.jpg" fill={true}/>
                 {/*<p className="legend">Legend 1</p>*/}
             </div>
-            <div className="h-screen">
+            <div className="h-96 lg:h-screen">
                 <Image alt={"slider image 2"} src="/slider2.jpg" fill={true}/>
                 {/*<p className="legend">Legend 2</p>*/}
             </div>
-            <div className="h-screen">
+            <div className="h-96 lg:h-screen">
                 <Image alt={"slider image 3"} src="/slider3.jpg" fill={true}/>
                 {/*<p className="legend">Legend 3</p>*/}
             </div>

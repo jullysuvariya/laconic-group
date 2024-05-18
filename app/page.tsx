@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 import Header from "@/components/Header"
 import ImageCarousel from "@/components/ImageCarousel";
@@ -112,17 +114,15 @@ const PRODUCTS = [
 export default function Home() {
     return (
         <div className="flex flex-col justify-between">
-            <header>
-                <Header/>
-            </header>
+            <Header/>
             <main>
-                <section className="relative h-screen">
+                <section className="relative lg:h-screen">
                     <ImageCarousel/>
                 </section>
                 <AboutUs/>
                 <GroupOfCompanies/>
                 {PRODUCTS.map((product, index: number) => {
-                    return <section className="relative h-screen" key={product.title}>
+                    return <section className="relative lg:h-screen" key={product.title}>
                         <ProductRow
                             key={product.title}
                             title={product.title}
@@ -136,8 +136,8 @@ export default function Home() {
                         />
                     </section>
                 })}
-                <CompanyPurpose />
-                <Footer />
+                <CompanyPurpose/>
+                <Footer/>
             </main>
         </div>
     );
