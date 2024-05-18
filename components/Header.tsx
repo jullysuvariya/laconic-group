@@ -1,12 +1,7 @@
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@nextui-org/navbar";
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-
-import {useState} from 'react'
+import React, {useState} from "react";
 import {Dialog} from '@headlessui/react'
 import {Button} from "@nextui-org/button";
-import {FaBars, FaPhoneAlt} from "react-icons/fa";
+import {FaBars} from "react-icons/fa";
 import {FaXmark} from "react-icons/fa6";
 import {MdAddIcCall} from "react-icons/md";
 
@@ -86,7 +81,7 @@ const Header = () => {
                             </div>
                             <div className="py-6">
                                 <a
-                                    href="#"
+                                    href="tel:919429653388"
                                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     Call Us
@@ -97,36 +92,6 @@ const Header = () => {
                 </Dialog.Panel>
             </Dialog>
         </header>
-    )
-}
-
-const Header2 = () => {
-    return (
-        <Navbar className="fixed top-0 z-10 bg-white py-6 px-32 w-full">
-            <NavbarBrand>
-                <Image alt="laconic brand logo" src="/logo.png" height={124} width={256}/>
-            </NavbarBrand>
-            <NavbarContent justify="end" className="hidden sm:flex gap-8 text-primary">
-                <NavbarItem>
-                    <Link color="foreground" href="#">
-                        About
-                    </Link>
-                </NavbarItem>
-                <NavbarItem>
-                    <Link color="foreground" href="#">
-                        Products
-                    </Link>
-                </NavbarItem>
-                <NavbarItem>
-                    <Link color="foreground" href="#">
-                        Contact
-                    </Link>
-                </NavbarItem>
-                <NavbarItem className="hidden lg:flex px-6 py-3 text-white rounded-xl bg-primary">
-                    <Link href="tel:919429653388">CALL US</Link>
-                </NavbarItem>
-            </NavbarContent>
-        </Navbar>
     )
 }
 export default Header
