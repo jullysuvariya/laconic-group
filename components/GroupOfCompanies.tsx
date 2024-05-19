@@ -47,7 +47,7 @@ const GroupOfCompanies = () => {
                 {logos.map((logo, index) => {
                     return (
                         <div key={index} className="keen-slider__slide flex justify-center items-center">
-                            <img className="h-16" alt="capital logo" src={logo}/>
+                            <img className="h-16" alt="company logo" src={logo}/>
                         </div>
                     )
                 })}
