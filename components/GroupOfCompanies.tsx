@@ -46,7 +46,7 @@ const GroupOfCompanies = () => {
             <div ref={sliderRef} className="keen-slider">
                 {logos.map((logo, index) => {
                     return (
-                        <div className="keen-slider__slide flex justify-center items-center">
+                        <div key={index} className="keen-slider__slide flex justify-center items-center">
                             <img className="h-16" alt="capital logo" src={logo}/>
                         </div>
                     )
