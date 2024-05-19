@@ -16,10 +16,10 @@ const Header = () => {
 
     return (
         <header className="sticky lg:fixed top-0 left-0 right-0 z-50 bg-white">
-            <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-                <a href="#" className="-m-1.5 p-1.5">
-                    <span className="sr-only">Your Company</span>
-                    <img className="h-8 lg:h-10 w-auto" src="/logo.png" alt=""/>
+            <nav className="mx-auto flex px-16 lg:px-64 items-center justify-between p-6" aria-label="Global">
+                <a href="#" className="">
+                    <span className="sr-only">Laconic Group of Companies</span>
+                    <img className="h-8 lg:h-12 w-auto" src="/logo.png" alt=""/>
                 </a>
                 <div className="flex lg:hidden">
                     <button

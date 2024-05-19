@@ -1,6 +1,5 @@
 'use client'
 
-import Image from "next/image";
 import Header from "@/components/Header"
 import ImageCarousel from "@/components/ImageCarousel";
 import ProductRow from "@/components/ProductRow";
@@ -9,6 +8,7 @@ import AboutUs from "@/components/AboutUs";
 import GroupOfCompanies from "@/components/GroupOfCompanies";
 import CompanyPurpose from "@/components/CompanyPurpose";
 import Footer from "@/components/Footer";
+import 'keen-slider/keen-slider.min.css'
 
 const PRODUCTS = [
     {

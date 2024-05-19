@@ -8,15 +8,15 @@ const Footer = () => {
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
-            <div className="mx-auto max-w-7xl px-8 py-12 sm:py-24 lg:px-8 lg:py-20">
+            <div className="mx-auto px-16 lg:px-32 py-12 lg:py-20">
                 <div className="flex flex-col lg:grid lg:grid-cols-6 gap-8">
                     <img
-                        className="max-lg:self-center w-1/2 lg:col-span-3"
+                        className="max-lg:self-center w-7/12 lg:col-span-3"
                         src="/logo.png"
                         alt="Company name"
                     />
                     <div className="lg:col-span-2 px-8">
-                        <h3 className="max-lg:text-center font-semibold leading-6 text-gray-900">CONTACT US</h3>
+                        <h3 className="max-lg:text-center font-bold leading-6 text-primary">CONTACT US</h3>
                         <div className="mt-6 space-y-4">
                             {navigation.contact.map((item, index) => (
                                 <a href={item.href} target={"_blank"} className="flex flex-row gap-4 items-center" key={index}>
@@ -26,8 +26,8 @@ const Footer = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="px-8">
-                        <h3 className="max-lg:text-center font-semibold leading-6 text-gray-900">FOLLOW US</h3>
+                    <div>
+                        <h3 className="max-lg:text-center font-bold leading-6 text-primary">FOLLOW US</h3>
                         <div className="mt-6 flex max-lg:justify-center gap-4">
                             {navigation.social.map((item, index) => (
                                 <a href={item.href}
