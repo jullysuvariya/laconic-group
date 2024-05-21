@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="mx-auto px-16 lg:px-32 py-12 lg:py-20">
                 <div className="flex flex-col lg:grid lg:grid-cols-6 gap-8">
                     <img
-                        className="max-lg:self-center w-7/12 lg:col-span-3"
+                        className="lg:self-center w-6/12 lg:col-span-3"
                         src="/logo.png"
                         alt="Company name"
                     />

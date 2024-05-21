@@ -19,7 +19,7 @@ const Header = () => {
             <nav className="mx-auto flex px-16 lg:px-64 items-center justify-between p-6" aria-label="Global">
                 <a href="#" className="">
                     <span className="sr-only">Laconic Group of Companies</span>
-                    <img className="h-8 lg:h-12 w-auto" src="/logo.png" alt=""/>
+                    <img className="h-8 lg:h-14 w-auto" src="/logo.png" alt=""/>
                 </a>
                 <div className="flex lg:hidden">
                     <button
