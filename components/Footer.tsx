@@ -19,7 +19,7 @@ const Footer = () => {
                         <h3 className="max-lg:text-center font-bold leading-6 text-primary">CONTACT US</h3>
                         <div className="mt-6 space-y-4">
                             {navigation.contact.map((item, index) => (
-                                <a href={item.href} target={"_blank"} className="flex flex-row gap-4 items-center" key={index}>
+                                <a href={item.href} target={"_blank"} className="flex flex-row gap-4 items-center hover:text-primary" key={index}>
                                     {item.icon}
                                     {item.description}
                                 </a>
@@ -33,7 +33,7 @@ const Footer = () => {
                                 <a href={item.href}
                                    key={index}
                                    target={"_blank"}
-                                   className="text-xl text-gray-600 hover:text-gray-900">
+                                   className="text-xl hover:text-primary">
                                     {item.icon}
                                 </a>
                             ))}

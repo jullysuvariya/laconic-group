@@ -20,7 +20,7 @@ const ProductRow = (props: ProductRowProps) => {
             <div className={`w-4/5 max-lg:z-10 lg:w-2/5 h-full lg:flex ${props.reverseRow ? 'justify-start' : 'justify-end'}`}>
                 <img alt={"product image"} className="h-full object-contain rounded-2xl" src={props.image}/>
             </div>
-            <div className="lg:w-3/5 flex flex-col p-16 lg:p-20 justify-center gap-4 lg:gap-16 bg-gray-100 max-lg:-mt-10 rounded-2xl lg:my-10 h-full">
+            <div className="lg:w-3/5 flex flex-col p-16 lg:p-20 justify-center gap-4 lg:gap-12 bg-gray-100 max-lg:-mt-10 rounded-2xl lg:my-10 h-full">
                 <div className="z-20 lg:z-0 flex flex-col text-2xl max-lg:text-center lg:text-6xl gap-2">
                     <p className="font-bold">{props.title}</p>
                     <p className="font-thin">{props.subtitle}</p>
