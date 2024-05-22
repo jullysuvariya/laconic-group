@@ -1,7 +1,7 @@
 const AboutUs = () => {
     return (
         <div className="flex flex-col lg:h-screen p-16 lg:px-64 justify-center text-center lg:text-lg gap-8">
-            <h1 className="text-3xl lg:text-6xl self-center mb-8 lg:mb-16 text-center border-b-4 border-primary pb-4 lg:pb-8 px-10">Legacy
+            <h1 className="text-3xl lg:text-6xl self-center mt-20 mb-8 lg:mb-16 text-center border-b-4 border-primary pb-4 lg:pb-8 px-10">Legacy
                 of Excellence</h1>
             <h1 className="text-xl lg:text-2xl self-center text-center">
                 <strong>
