@@ -17,7 +17,7 @@ const PRODUCTS = [
         "description": "Add timeless elegance to your space with the Tiles Collection, a fine blend of traditional " +
             "methods and modern designs that adds a sturdy element of amazement! Add a piece of natural beauty and " +
             "enhance its aura! Redefine the Luxury with Laconic Ceramic",
-        "image": "/marble.jpeg",
+        "image": "/tiles.jpg",
         "sizes": ["300x300mm", "300x600mm", "600x600mm", "800x800mm", "600x1200mm", "600x1800mm", "800x1200mm",
             "800x1600mm", "1000x1000mm", "1200x1200mm", "1200x1800mm", "1200x2400mm"],
         "linkHref": "https://laconicceramic.com/",
@@ -29,7 +29,7 @@ const PRODUCTS = [
         "description": "Give areas with high footfall a shield of story creations that are elegant in appeal and " +
             "durable in property with our Essential SPC Flooring Collection! Embrace ordinary spaces with extraordinary " +
             "surfaces with Laconic Surfaces!",
-        "image": "/marble.jpeg",
+        "image": "/spc.jpg",
         "sizes": ["181x1220mm", "230x1220mm", "230x1524mm", "310x601mm"],
         "linkHref": "https://www.enrichpapers.com/",
         "linkText": "Visit Enrich Papers",
@@ -40,7 +40,7 @@ const PRODUCTS = [
         "description": "Add motifs of inspiration to your everyday routine with our Premium Bathware Collection that " +
             "keeps you shielded while serving an aesthetic look. Elevate your bath ware experiences to a distinguished" +
             " height with our premium ranges.",
-        "image": "/marble.jpeg",
+        "image": "/buildingMaterial.jpg",
         "sizes": ["181x1220mm", "230x1220mm", "230x1524mm", "310x601mm"],
         "linkHref": "https://www.enrichpapers.com/",
         "linkText": "Visit Enrich Papers",
@@ -50,7 +50,7 @@ const PRODUCTS = [
         "subtitle": "Collection",
         "description": "Finding A Permanent Paper Solution Is Our Ultimate Goal! We are the industry leaders and " +
             "provides the most reliable and sustainable solution for all Your Paper & Paperboards Requirements",
-        "image": "/marble.jpeg",
+        "image": "/paper.jpg",
         "sizes": ["Duplex Boards (CCNB)", "Triplex Boards (Whiteback)", "Testliner & Fluting Paper",
             "Kraft Paper Boards", "MG Poster", "Tissue Paper"],
         "linkHref": "https://www.enrichpapers.com/",
@@ -62,7 +62,7 @@ const PRODUCTS = [
         "description": "Laconic is more than just a brand; it's a commitment to a greener, more sustainable world. " +
             "Founded on the principles of eco-friendliness and quality, we are dedicated to crafting biodegradable " +
             "and compostable tableware that not only elevates your dining experience but also reduces environmental impact",
-        "image": "/marble.jpeg",
+        "image": "/baggase.jpg",
         "sizes": ["Bagasse Plates", "Bagasse Bowls", "Bagasse Compartment Plates", "Bagasse Takeaway Clamshell",
             "Bagasse Food Container", "Paper Cups & Bowls"],
         "linkHref": "https://www.enrichpapers.com/",
@@ -76,7 +76,7 @@ const PRODUCTS = [
             " products are widely known for their remarkable properties like durability, high wearing & tearing " +
             "strength, smooth finishes, and competitive rates. Our products are extensively used for storing and" +
             " transporting numerous contents.",
-        "image": "/marble.jpeg",
+        "image": "/polypack.jpg",
         "sizes": ["PP Woven Fabric", "PP Bags", "PP Sacks", "PP Rope & Twine", "FIBC Bags", "Fishing Net", "PVC Chairs & Tables"],
         "linkHref": "https://www.enrichpapers.com/",
         "linkText": "Visit Enrich Papers",
