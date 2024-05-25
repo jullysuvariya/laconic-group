@@ -10,7 +10,7 @@ const AboutUs = () => {
 
     useEffect(() => {
         animate(count, 30, {
-            duration: 2
+            duration: 3
         });
     }, []);
 
