@@ -5,10 +5,6 @@ import { motion } from 'framer-motion';
 
 const Card = ({ title, description, icon }: { title: string, description: string, icon: string }) => {
     const childMotion = {
-        tap:{
-            scale: 1.05,
-            y: -10,
-        },
         hover: {
             scale: 1.05,
             y: -10,
@@ -18,7 +14,6 @@ const Card = ({ title, description, icon }: { title: string, description: string
     return (
         <motion.div
             key={title}
-            whileTap="tap"
             whileHover="hover"
             className="group flex items-center flex-col rounded-2xl border-primary border px-8 lg:px-20 py-10"
             variants={childMotion}
