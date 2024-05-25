@@ -1,17 +1,33 @@
+import { RevelImage } from "./RevealImage";
 import { RevelTextHorizontal } from "./revelTextHorizonal"
+import { motion } from 'framer-motion';
 
 const Card = ({ title, description, icon }: { title: string, description: string, icon: string }) => {
-    return (
-        <li key={title} className="flex items-center flex-col rounded-2xl border-primary border px-8 lg:px-20 py-10">
-            <img className="mx-auto h-20 w-20 lg:h-20 lg:w-20 -mt-20 rounded-full" src={icon} alt="" />
-            <h3 className="my-6 text-center font-semibold leading-7 text-2xl tracking-tight">{title}</h3>
-            {description.split("\n").map((line, index) => {
-                return (
-                    <p key={index} className="text-sm leading-6 text-center text-gray-400">{line}</p>
-                )
-            })}
-        </li>
+    const childMotion = {
+        hover: {
+            scale: 1.05,
+            y: -10,
+        }
+    };
 
+    return (
+        <motion.div
+            key={title}
+            whileHover="hover"
+            className="group flex items-center flex-col rounded-2xl border-primary border px-8 lg:px-20 py-10"
+            variants={childMotion}
+        >
+            <li key={title} className="">
+                <RevelImage src={icon} className={"mx-auto h-20 w-20 lg:h-20 lg:w-20 -mt-20 rounded-full"}>
+                </RevelImage>
+                <h3 className="my-6 text-center font-semibold leading-7 text-2xl tracking-tight">{title}</h3>
+                {description.split("\n").map((line, index) => {
+                    return (
+                        <p key={index} className="text-sm leading-6 text-center group-hover:text-black text-gray-400">{line}</p>
+                    )
+                })}
+            </li>
+        </motion.div>
     )
 }
 
@@ -42,13 +58,13 @@ const purposes = [
 const CompanyPurpose = () => {
     return (
         <div className="px-16 lg:px-32 lg:h-screen justify-center my-16 lg:my-32 flex flex-col gap-4">
-            <RevelTextHorizontal>
-
-                <h6 className="self-center text-sm lg:text-3xl font-light">Our</h6>
+            <RevelTextHorizontal className="flex flex-col items-center gap-4">
+                <h6 className="self-center text-base lg:text-3xl font-light">Our</h6>
                 <h1 className="text-2xl lg:text-6xl self-center mb-8 lg:mb-16 text-center border-b-4 border-primary pb-4 lg:pb-8 px-10">
                     Core Principles
                 </h1>
             </RevelTextHorizontal>
+
 
             <ul
                 role="list"

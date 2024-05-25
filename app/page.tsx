@@ -18,8 +18,10 @@ const PRODUCTS = [
             "methods and modern designs that adds a sturdy element of amazement! Add a piece of natural beauty and " +
             "enhance its aura! Redefine the Luxury with Laconic Ceramic",
         "image": "/tiles.jpg",
-        "sizes": ["300x300mm", "300x600mm", "600x600mm", "800x800mm", "600x1200mm", "600x1800mm", "800x1200mm",
-            "800x1600mm", "1000x1000mm", "1200x1200mm", "1200x1800mm", "1200x2400mm"],
+        "sizes": {
+            "": ["300x300mm", "300x600mm", "600x600mm", "800x800mm", "600x1200mm", "600x1800mm", "800x1200mm",
+                "800x1600mm", "1000x1000mm", "1200x1200mm", "1200x1800mm", "1200x2400mm"]
+        },
         "linkHref": "https://laconicceramic.com/",
         "linkText": "Visit Laconic Ceramic",
     },
@@ -30,7 +32,9 @@ const PRODUCTS = [
             "durable in property with our Essential SPC Flooring Collection! Embrace ordinary spaces with extraordinary " +
             "surfaces with Laconic Surfaces!",
         "image": "/spc.jpg",
-        "sizes": ["181x1220mm", "230x1220mm", "230x1524mm", "310x601mm"],
+        "sizes": {
+            "": ["181x1220mm", "230x1220mm", "230x1524mm", "310x601mm"]
+        },
         "linkHref": "https://www.enrichpapers.com/",
         "linkText": "Visit Enrich Papers",
     },
@@ -41,7 +45,10 @@ const PRODUCTS = [
             "keeps you shielded while serving an aesthetic look. Elevate your bath ware experiences to a distinguished" +
             " height with our premium ranges.",
         "image": "/buildingMaterial.jpg",
-        "sizes": ["181x1220mm", "230x1220mm", "230x1524mm", "310x601mm"],
+        "sizes": {
+            "Bathware Collection": ["Water Closets", "Urinals", "Basins", "Sinks (Quartz Sinks, Steel Sinks)", "Faucets"],
+            "Tiling Solutions": ["Adhesive", "Grout", "Admixture", "Waterproofing", "Cleaners"]
+        },
         "linkHref": "https://www.enrichpapers.com/",
         "linkText": "Visit Enrich Papers",
     },
@@ -51,8 +58,10 @@ const PRODUCTS = [
         "description": "Finding A Permanent Paper Solution Is Our Ultimate Goal! We are the industry leaders and " +
             "provides the most reliable and sustainable solution for all Your Paper & Paperboards Requirements",
         "image": "/paper.jpg",
-        "sizes": ["Duplex Boards (CCNB)", "Triplex Boards (Whiteback)", "Testliner & Fluting Paper",
-            "Kraft Paper Boards", "MG Poster", "Tissue Paper"],
+        "sizes": {
+            "": ["Duplex Boards (CCNB)", "Triplex Boards (Whiteback)", "Testliner & Fluting Paper",
+                "Kraft Paper Boards", "MG Poster", "Tissue Paper"]
+        },
         "linkHref": "https://www.enrichpapers.com/",
         "linkText": "Visit Enrich Papers",
     },
@@ -63,8 +72,10 @@ const PRODUCTS = [
             "Founded on the principles of eco-friendliness and quality, we are dedicated to crafting biodegradable " +
             "and compostable tableware that not only elevates your dining experience but also reduces environmental impact",
         "image": "/baggase.jpg",
-        "sizes": ["Bagasse Plates", "Bagasse Bowls", "Bagasse Compartment Plates", "Bagasse Takeaway Clamshell",
-            "Bagasse Food Container", "Paper Cups & Bowls"],
+        "sizes": {
+            "": ["Bagasse Plates", "Bagasse Bowls", "Bagasse Compartment Plates", "Bagasse Takeaway Clamshell",
+                "Bagasse Food Container", "Paper Cups & Bowls"]
+        },
         "linkHref": "https://www.enrichpapers.com/",
         "linkText": "Visit Enrich Papers",
     },
@@ -77,7 +88,9 @@ const PRODUCTS = [
             "strength, smooth finishes, and competitive rates. Our products are extensively used for storing and" +
             " transporting numerous contents.",
         "image": "/polypack.jpg",
-        "sizes": ["PP Woven Fabric", "PP Bags", "PP Sacks", "PP Rope & Twine", "FIBC Bags", "Fishing Net", "PVC Chairs & Tables"],
+        "sizes": {
+            "": ["PP Woven Fabric", "PP Bags", "PP Sacks", "PP Rope & Twine", "FIBC Bags", "Fishing Net", "PVC Chairs & Tables"],
+        },
         "linkHref": "https://www.enrichpapers.com/",
         "linkText": "Visit Enrich Papers",
     },
@@ -91,9 +104,11 @@ const PRODUCTS = [
             " Garage units, Automobile parts units, Embroidery units, Agricultural land, and several small & medium" +
             " industries in India and overseas.",
         "image": "/marble.jpeg",
-        "sizes": ["Air Compressors", "High Pressure Pumps", "Slotting Machines", "Heavy Duty Grinders & Polishers",
-            "Centrifugal Blowers", "Coolant Pumps", "Burner", "Switch Boards", "Electric Motors", "Welding Machines",
-            "Lathe Machines", "Drill Machines"],
+        "sizes": {
+            "": ["Air Compressors", "High Pressure Pumps", "Slotting Machines", "Heavy Duty Grinders & Polishers",
+                "Centrifugal Blowers", "Coolant Pumps", "Burner", "Switch Boards", "Electric Motors", "Welding Machines",
+                "Lathe Machines", "Drill Machines"]
+        },
         "linkHref": "https://www.enrichpapers.com/",
         "linkText": "Visit Enrich Papers",
     },
@@ -105,7 +120,9 @@ const PRODUCTS = [
             "through years of dedicated service and a commitment to excellence. With millions of satisfied customers" +
             " worldwide, we've become synonymous with reliability and quality that stands the test of time.",
         "image": "/marble.jpeg",
-        "sizes": ["Fans", "Heater", "LED Lightings", "Iron & Kettle", "MCB & ELCB", "Electric Wires & Cables"],
+        "sizes": {
+            "": ["Fans", "Heater", "LED Lightings", "Iron & Kettle", "MCB & ELCB", "Electric Wires & Cables"]
+        },
         "linkHref": "https://www.enrichpapers.com/",
         "linkText": "Visit Enrich Papers",
     },
@@ -114,13 +131,13 @@ const PRODUCTS = [
 export default function Home() {
     return (
         <div className="flex flex-col justify-between">
-            <Header/>
+            <Header />
             <main>
                 <section className="relative lg:h-screen">
-                    <ImageCarousel/>
+                    <ImageCarousel />
                 </section>
-                <AboutUs/>
-                <GroupOfCompanies/>
+                <AboutUs />
+                <GroupOfCompanies />
                 {PRODUCTS.map((product, index: number) => {
                     return <section className="relative lg:h-screen" key={product.title}>
                         <ProductRow
@@ -136,8 +153,8 @@ export default function Home() {
                         />
                     </section>
                 })}
-                <CompanyPurpose/>
-                <Footer/>
+                <CompanyPurpose />
+                <Footer />
             </main>
         </div>
     );

@@ -25,8 +25,16 @@ const GroupOfCompanies = () => {
         loop: true,
         renderMode: "performance",
         drag: false,
+        breakpoints: {
+            "(min-width: 1280px)": {
+                slides: { perView: 6 },
+            },
+            "(min-width: 1024px)": {
+                slides: { perView: 6 },
+            },
+        },
         slides: {
-            perView: 6,
+            perView: 2,
         },
         created(s) {
             s.moveToIdx(5, true, animation);
@@ -39,13 +47,20 @@ const GroupOfCompanies = () => {
         },
     });
     return (
-        <div className="flex flex-col lg:h-screen justify-center text-2xl gap-4">
-            <RevelTextHorizontal>
-                <h6 className="self-center text-sm lg:text-3xl font-light">Our</h6>
+        <div className="flex flex-col max-lg:mt-16 max-lg:mb-28 lg:h-screen justify-center text-2xl gap-4">
+            <RevelTextHorizontal className="flex flex-col items-center gap-4">
+                <h6 className="self-center text-base lg:text-3xl font-light">Our</h6>
                 <h1 className="text-2xl lg:text-6xl self-center mb-8 lg:mb-16 text-center border-b-4 border-primary pb-4 lg:pb-8 px-10">
                     Group of Companies
                 </h1>
             </RevelTextHorizontal>
+
+            {/* <RevelTextHorizontal>
+                <h6 className="self-center text-sm lg:text-3xl font-light">Our</h6>
+                <h1 className="text-2xl lg:text-6xl self-center mb-8 lg:mb-16 text-center border-b-4 border-primary pb-4 lg:pb-8 px-10">
+                    Group of Companies
+                </h1>
+            </RevelTextHorizontal> */}
 
             <div ref={sliderRef} className="keen-slider">
                 {logos.map((logo, index) => {

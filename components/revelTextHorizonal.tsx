@@ -1,7 +1,7 @@
 import React, { ReactChild, ReactChildren, ReactElement, ReactNode } from 'react'
 import { motion } from 'framer-motion';
 
-export const RevelTextHorizontal = ({ children, className }: { children: ReactElement | ReactElement[], className?: string }) => {
+export const RevelTextHorizontal = ({ children, className }: { children: ReactElement | ReactElement[] | string, className?: string }) => {
 
     const variants = {
         hidden: { opacity: 0, x: -100 },
@@ -9,7 +9,7 @@ export const RevelTextHorizontal = ({ children, className }: { children: ReactEl
     };
 
     return (
-        <motion.div
+        <motion.h1
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -18,6 +18,6 @@ export const RevelTextHorizontal = ({ children, className }: { children: ReactEl
             className={className}
         >
             {children}
-        </motion.div>
+        </motion.h1>
     )
 }
