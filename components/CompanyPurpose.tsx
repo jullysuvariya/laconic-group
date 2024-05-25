@@ -1,9 +1,14 @@
+import { tap } from "node:test/reporters";
 import { RevelImage } from "./RevealImage";
 import { RevelTextHorizontal } from "./revelTextHorizonal"
 import { motion } from 'framer-motion';
 
 const Card = ({ title, description, icon }: { title: string, description: string, icon: string }) => {
     const childMotion = {
+        tap:{
+            scale: 1.05,
+            y: -10,
+        },
         hover: {
             scale: 1.05,
             y: -10,
