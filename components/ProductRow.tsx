@@ -4,7 +4,7 @@ import { BiLinkExternal } from "react-icons/bi";
 import { RevelDivHorizontal } from "./revealDivHorizontal";
 import { RevelImgHorizontal } from "./revealImageHorizontal";
 
-interface ProductRowProps {
+export interface ProductRowProps {
     image: string,
     title: string,
     subtitle: string,
