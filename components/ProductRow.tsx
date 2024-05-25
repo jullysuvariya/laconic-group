@@ -40,7 +40,7 @@ const ProductRow = (props: ProductRowProps) => {
                     <div className="flex flex-col gap-6">
                         {Object.keys(props.sizes).map((key, index: number) => {
                             return (
-                                <div className="flex flex-col gap-1">
+                                <div className="flex flex-col gap-1" key={index}>
                                     {key != "" && <h6 className="font-semibold">{key}</h6>}
                                     <ul className="grid lg:grid-cols-2 text-base list-inside list-disc">
                                         {props.sizes[key].map((size: string, index: number) => {
