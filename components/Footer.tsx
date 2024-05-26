@@ -47,17 +47,20 @@ const Footer = () => {
                 <p>© 2024 Laconic Group</p>
                 <div className="flex flex-col lg:flex-row items-center lg:gap-2 gap-1">
                     <p>Developed by: </p>
-                    <Link
-                        className="flex items-center gap-2 hover:text-primary"
-                        href="https://www.linkedin.com/in/jully-suvariya-9b632023b/">
-                        Jully Suvariya
-                    </Link>
-                    <p className="hidden lg:block">&</p>
-                    <Link
-                        className="flex items-center gap-2 hover:text-primary"
-                        href="https://www.linkedin.com/in/rajsuvariya/">
-                        Raj Suvariya
-                    </Link>
+
+                    <div className="flex gap-2">
+                        <Link
+                            className="flex items-center gap-2 hover:text-primary"
+                            href="https://www.linkedin.com/in/jully-suvariya-9b632023b/">
+                            Jully Suvariya
+                        </Link>
+                        <p>&</p>
+                        <Link
+                            className="flex items-center gap-2 hover:text-primary"
+                            href="https://www.linkedin.com/in/rajsuvariya/">
+                            Raj Suvariya
+                        </Link>
+                    </div>
                 </div>
             </div>
         </footer>
