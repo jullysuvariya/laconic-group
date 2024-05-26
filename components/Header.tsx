@@ -6,8 +6,8 @@ import {FaXmark} from "react-icons/fa6";
 import {MdAddIcCall} from "react-icons/md";
 
 const navigation = [
-    {name: 'About', href: '#'},
-    {name: 'Products', href: '#'},
+    {name: 'About', href: '#about'},
+    {name: 'Products', href: '#products'},
     {name: 'Contact', href: '#'},
 ]
 
@@ -16,7 +16,7 @@ const Header = () => {
 
     return (
         <header className="sticky lg:fixed top-0 left-0 right-0 z-50 bg-white">
-            <nav className="mx-auto flex px-16 lg:px-64 items-center justify-between p-6" aria-label="Global">
+            <nav className="mx-auto flex px-8 lg:px-64 items-center justify-between p-6" aria-label="Global">
                 <a href="#" className="">
                     <span className="sr-only">Laconic Group of Companies</span>
                     <img className="h-10 lg:h-14 w-auto" src="/logo.png" alt=""/>

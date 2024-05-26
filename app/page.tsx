@@ -3,7 +3,7 @@
 import Header from "@/components/Header"
 import ImageCarousel from "@/components/ImageCarousel";
 import ProductRow, { ProductRowProps } from "@/components/ProductRow";
-import React from "react";
+import React, { useEffect } from "react";
 import AboutUs from "@/components/AboutUs";
 import GroupOfCompanies from "@/components/GroupOfCompanies";
 import CompanyPurpose from "@/components/CompanyPurpose";
@@ -102,8 +102,24 @@ const PRODUCTS: ProductRowProps[] = [
     },
 ];
 
-
 export default function Home() {
+
+    useEffect(() => {
+        window.onload = function () {
+            console.log("window loaded");
+            // Check if the URL contains a hash (e.g., #elementId)
+            if (window.location.hash) {
+                // Get the element specified in the URL hash
+                var element = document.querySelector(window.location.hash);
+
+                // Scroll to the element if it exists
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        };
+    }, []);
+
     return (
         <div className="flex flex-col justify-between">
             <Header />
@@ -113,21 +129,23 @@ export default function Home() {
                 </section>
                 <AboutUs />
                 <GroupOfCompanies />
-                {PRODUCTS.map((product, index: number) => {
-                    return <section className="relative lg:h-screen" key={product.title}>
-                        <ProductRow
-                            key={product.title}
-                            title={product.title}
-                            subtitle={product.subtitle}
-                            description={product.description}
-                            image={product.image}
-                            sizes={product.sizes}
-                            linkHref={product.linkHref}
-                            linkText={product.linkText}
-                            reverseRow={index % 2 == 1}
-                        />
-                    </section>
-                })}
+                <div id="products">
+                    {PRODUCTS.map((product, index: number) => {
+                        return <section className="relative lg:h-screen" key={product.title}>
+                            <ProductRow
+                                key={product.title}
+                                title={product.title}
+                                subtitle={product.subtitle}
+                                description={product.description}
+                                image={product.image}
+                                sizes={product.sizes}
+                                linkHref={product.linkHref}
+                                linkText={product.linkText}
+                                reverseRow={index % 2 == 1}
+                            />
+                        </section>
+                    })}
+                </div>
                 <CompanyPurpose />
                 <Footer />
             </main>

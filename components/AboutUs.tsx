@@ -1,21 +1,25 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { RevelTextHorizontal } from "./revelTextHorizonal"
 import { RevelTextVertical } from "./revelTextVertical"
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
 
 const AboutUs = () => {
 
+    const ref = useRef(null);
     const count = useMotionValue(0);
     const rounded = useTransform(count, Math.round);
+    const isInView = useInView(ref);
 
     useEffect(() => {
-        animate(count, 30, {
-            duration: 3
-        });
-    }, []);
+        if (isInView) {
+            animate(count, 30, {
+                duration: 3
+            });
+        }
+    }, [isInView, count])
 
     return (
-        <div className="flex flex-col lg:h-screen p-16 lg:px-64 justify-center text-center lg:text-lg gap-8 lg:mt-20">
+        <div id="about" className="flex flex-col lg:h-screen p-16 lg:px-64 justify-center text-center lg:text-lg gap-8 lg:mt-20">
             <RevelTextHorizontal className="flex flex-col items-center text-3xl lg:text-6xl self-center text-center px-10 border-b-4 border-primary mb-8 lg:mb-16 pb-4 lg:pb-8">
                 Legacy of Excellence
             </RevelTextHorizontal>
@@ -23,7 +27,7 @@ const AboutUs = () => {
             <RevelTextVertical>
                 <h1 className="text-xl lg:text-2xl self-center text-center">
                     <strong>
-                        <motion.span className="text-4xl">{rounded}</motion.span><span className="text-3xl self-baseline">+</span>&nbsp; Years Of Excellence With Quality At It&lsquo;s Best!
+                        <motion.span ref={ref} className="text-4xl">{rounded}</motion.span><span className="text-3xl self-baseline">+</span>&nbsp; Years Of Excellence With Quality At It&lsquo;s Best!
                     </strong>
                 </h1>
             </RevelTextVertical>

@@ -1,7 +1,6 @@
-import { tap } from "node:test/reporters";
-import { RevelImage } from "./RevealImage";
-import { RevelTextHorizontal } from "./revelTextHorizonal"
 import { motion } from 'framer-motion';
+import { RevelImage } from "./RevealImage";
+import { RevelDivHorizontal } from "./revealDivHorizontal";
 
 const Card = ({ title, description, icon }: { title: string, description: string, icon: string }) => {
     const childMotion = {
@@ -58,13 +57,13 @@ const purposes = [
 
 const CompanyPurpose = () => {
     return (
-        <div className="px-16 lg:px-32 lg:h-screen justify-center my-16 lg:my-32 flex flex-col gap-4">
-            <RevelTextHorizontal className="flex flex-col items-center gap-4">
+        <div className="px-16 lg:px-32 lg:h-screen justify-center my-16 mb-28 lg:my-32 flex flex-col gap-4">
+            <RevelDivHorizontal className="flex flex-col items-center gap-4">
                 <h6 className="self-center text-base lg:text-3xl font-light">Our</h6>
                 <h1 className="text-2xl lg:text-6xl self-center mb-8 lg:mb-16 text-center border-b-4 border-primary pb-4 lg:pb-8 px-10">
                     Core Principles
                 </h1>
-            </RevelTextHorizontal>
+            </RevelDivHorizontal>
 
 
             <ul
