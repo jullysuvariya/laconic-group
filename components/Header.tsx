@@ -19,12 +19,12 @@ const Header = () => {
             <nav className="mx-auto flex px-16 lg:px-64 items-center justify-between p-6" aria-label="Global">
                 <a href="#" className="">
                     <span className="sr-only">Laconic Group of Companies</span>
-                    <img className="h-8 lg:h-14 w-auto" src="/logo.png" alt=""/>
+                    <img className="h-10 lg:h-14 w-auto" src="/logo.png" alt=""/>
                 </a>
                 <div className="flex lg:hidden">
                     <button
                         type="button"
-                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                        className="-m-2.5 inline-flex items-center text-primary justify-center rounded-md p-2.5"
                         onClick={() => setMobileMenuOpen(true)}
                     >
                         <span className="sr-only">Open main menu</span>
@@ -52,18 +52,18 @@ const Header = () => {
                         <a href="#" className="-m-1.5 p-1.5">
                             <span className="sr-only">Your Company</span>
                             <img
-                                className="h-8 w-auto"
+                                className="h-10 w-auto"
                                 src="/logo.png"
                                 alt=""
                             />
                         </a>
                         <button
                             type="button"
-                            className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                            className="-m-2.5 rounded-md p-2.5 text-primary"
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             <span className="sr-only">Close menu</span>
-                            <FaXmark className="h-6 w-6" aria-hidden="true"/>
+                            <FaXmark className="h-6 w-6 text-primary" aria-hidden="true"/>
                         </button>
                     </div>
                     <div className="mt-6 flow-root">
@@ -73,7 +73,7 @@ const Header = () => {
                                     <a
                                         key={item.name}
                                         href={item.href}
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary hover:bg-gray-50"
                                     >
                                         {item.name}
                                     </a>
@@ -82,7 +82,7 @@ const Header = () => {
                             <div className="py-6">
                                 <a
                                     href="tel:919429653388"
-                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-primary hover:bg-gray-50"
                                 >
                                     Call Us
                                 </a>
