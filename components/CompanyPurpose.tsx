@@ -36,23 +36,23 @@ const purposes = [
     {
         "icon": "vision_icon.svg",
         "title": "Our Vision",
-        "description": "To be the world's no. 1 Provider of innovative solutions in consumer electrical products"
+        "description": "To satisfy our customers with great and value proposition driven by continuous improvements " +
+            "in creativity, innovation, efficiency, and customer service. To constantly upgrade our technology and conduct " +
+            "research and development to innovate different designs."
     },
     {
         "icon": "mision_icon.svg",
         "title": "Our Mission",
-        "description": "To persistently work to achieve our vision by transforming our self into a rapidly growing," +
-            " high performing and exponential organization which will continue to develop and improve process and" +
-            " products to ensure innovative products with higher value and quality at a competitive price."
+        "description": "To design and manufacture the product from our manufacturing unit to become the market " +
+            "and brand leader in the various sectors. To continue to provide unrivaled service and exceptional value " +
+            "for money to our growing customer base."
     },
     {
         "icon": "value.svg",
         "title": "Our Values",
-        "description": "Integrity\n" +
-            "Team Work\n" +
-            "Performance\n" +
-            "Entrepreneurial Spirit\n" +
-            "Customer-Centric"
+        "description": "Laconic Group stands for impeccable quality. Our products undergo rigorous quality assurance "+
+        "processes to ensure durability and aesthetic appeal. Embracing creativity, we continuously explore new designs "+
+        "and patterns to stay ahead in the dynamic world."
     }
 ]
 
