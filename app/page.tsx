@@ -9,6 +9,7 @@ import GroupOfCompanies from "@/components/GroupOfCompanies";
 import CompanyPurpose from "@/components/CompanyPurpose";
 import Footer from "@/components/Footer";
 import 'keen-slider/keen-slider.min.css'
+import { TextShimmerDemo } from "@/components/splashScreen";
 
 const PRODUCTS: ProductRowProps[] = [
     {
@@ -105,6 +106,14 @@ const PRODUCTS: ProductRowProps[] = [
 export default function Home() {
 
     useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const loader = document.getElementById('globalLoader');
+            if (loader)
+                loader.remove();
+        }
+    }, []);
+
+    useEffect(() => {
         window.onload = function () {
             console.log("window loaded");
             // Check if the URL contains a hash (e.g., #elementId)
@@ -119,11 +128,17 @@ export default function Home() {
             }
         };
     }, []);
-
-    return (
+// bg-gradient-to-b via-60% via-white from-white to-primary-500
+    return (<>
+        <div id="globalLoader" className="flex items-center justify-center fixed z-50 bg-primary w-screen h-screen">
+            <TextShimmerDemo />
+        </div>
         <div className="flex flex-col justify-between">
             <Header />
             <main>
+                {/* <section className="h-screen">
+                    <TextShimmerDemo />
+                </section> */}
                 <section className="relative lg:h-screen">
                     <ImageCarousel />
                 </section>
@@ -150,5 +165,6 @@ export default function Home() {
                 <Footer />
             </main>
         </div>
+    </>
     );
 }
