@@ -11,10 +11,10 @@ function classNames(...classes: string[]) {
 }
 
 const products = [
-    { name: 'Premium Tiles', href: '/' },
-    { name: 'SPC Vinyl Flooring', href: '/' },
+    { name: 'Premium Tiles', href: 'https://laconicceramic.com/' },
+    { name: 'SPC Vinyl Flooring', href: 'https://www.laconicsurfaces.com/' },
     { name: 'Building Materials', href: '/' },
-    { name: 'Paper & Paperboards', href: '/' },
+    { name: 'Paper & Paperboards', href: 'https://www.enrichpapers.com/' },
     { name: 'Biowares & Sustainable Products', href: '/' },
     { name: 'Polypack Products', href: '/' },
     { name: 'Industrial Machinery & Equipments', href: '/' },
