@@ -19,7 +19,7 @@ const AboutUs = () => {
     }, [isInView, count])
 
     return (
-        <div id="about" className="flex flex-col lg:h-screen p-16 lg:px-64 justify-center text-center lg:text-lg gap-8 lg:mt-20">
+        <div id="about" className="flex flex-col lg:h-screen px-16 py-10 lg:px-64 justify-center text-center lg:text-lg gap-8 lg:mt-20">
             <RevelTextHorizontal className="flex flex-col items-center text-3xl lg:text-6xl self-center text-center px-10 border-b-4 border-primary mb-8 lg:mb-16 pb-4 lg:pb-8">
                 Legacy of Excellence
             </RevelTextHorizontal>

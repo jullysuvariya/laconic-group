@@ -4,8 +4,8 @@ import { RevelDivHorizontal } from "./revealDivHorizontal";
 const animation = { duration: 10000, easing: (t: any) => t };
 
 const logos = [
-    "/laconic_ceramincs_logo_2.png",
     "/capital_logo_2.png",
+    "/laconic_ceramincs_logo_2.png",
     "/tulsi_real_choice_logo_2.png",
     "/laconic_biowares_logo_2.png",
     "/captain_logo_2.png",
@@ -13,10 +13,11 @@ const logos = [
     "/laconic_polypack_logo_2.png",
     "/enrich_logo_2.png",
     "/ulixo_logo_2.png",
-    "/phinix_ceramics_logo_2.png",
+    "/lap_logo_2.png",
     "/tulsi_logo_2.png",
     "/laconic_surfaces_logo_2.png",
     "/maruti_logo_2.png",
+    "/phinix_ceramics_logo_2.png",
 ]
 
 const GroupOfCompanies = () => {

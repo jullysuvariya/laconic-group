@@ -10,6 +10,9 @@ const config: Config = {
         extend: {
             animation: {
                 shimmer: "shimmer 4s infinite",
+                slidein: "slidein 0.5s forwards",
+                slideout: 'slideout 0.5s ease-out forwards',
+
             },
             keyframes: {
                 shimmer: {
@@ -18,6 +21,22 @@ const config: Config = {
                     },
                     "50%": {
                         "background-position": "calc(100% + var(--shimmer-width)) 0",
+                    },
+                },
+                slidein: {
+                    "0%": {
+                        "transform": "translateX(-100%)"
+                    },
+                    "100%": {
+                        "transform": "translateX(0)"
+                    }
+                },
+                slideout: {
+                    '0%': {
+                        "transform": 'translateX(0)'
+                    },
+                    '100%': {
+                        'transform': 'translateX(100%)'
                     },
                 },
             },
@@ -29,16 +48,16 @@ const config: Config = {
             colors: {
                 "primary": {
                     DEFAULT: '#0086a3', // Primary color
-                    '50': 'rgba(0, 134, 163, 0.05)',
-                    '100': 'rgba(0, 134, 163, 0.1)',
-                    '200': 'rgba(0, 134, 163, 0.2)',
-                    '300': 'rgba(0, 134, 163, 0.3)',
-                    '400': 'rgba(0, 134, 163, 0.4)',
-                    '500': 'rgba(0, 134, 163, 0.5)',
-                    '600': 'rgba(0, 134, 163, 0.6)',
-                    '700': 'rgba(0, 134, 163, 0.7)',
-                    '800': 'rgba(0, 134, 163, 0.8)',
-                    '900': 'rgba(0, 134, 163, 0.9)',
+                    '50': 'hsl(190, 57%, 97%)',
+                    '100': 'hsl(190, 57%, 90%)',
+                    '200': 'hsl(190, 57%, 80%)',
+                    '300': 'hsl(190, 57%, 70%)',
+                    '400': 'hsl(190, 57%, 60%)',
+                    '500': 'hsl(190, 57%, 50%)', // Same as DEFAULT but without alpha
+                    '600': 'hsl(190, 57%, 40%)',
+                    '700': 'hsl(190, 57%, 30%)',
+                    '800': 'hsl(190, 57%, 20%)',
+                    '900': 'hsl(190, 57%, 10%)',
                 }
             }
         },

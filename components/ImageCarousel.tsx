@@ -17,15 +17,23 @@ const ImageCarousel = () => {
             interval={2000}
         >
             <div className="h-96 lg:h-screen">
-                <Image alt={"slider image 1"} src="/slider1.jpg" fill={true}/>
+                <Image alt={"slider image 1"} src="/slide1.jpg" fill={true}/>
                 {/*<p className="legend">Legend 1</p>*/}
             </div>
             <div className="h-96 lg:h-screen">
-                <Image alt={"slider image 2"} src="/slider2.jpg" fill={true}/>
+                <Image alt={"slider image 2"} src="/slide2.jpg" fill={true}/>
                 {/*<p className="legend">Legend 2</p>*/}
             </div>
             <div className="h-96 lg:h-screen">
-                <Image alt={"slider image 3"} src="/slider3.jpg" fill={true}/>
+                <Image alt={"slider image 3"} src="/slide3.jpg" fill={true}/>
+                {/*<p className="legend">Legend 3</p>*/}
+            </div>
+            <div className="h-96 lg:h-screen">
+                <Image alt={"slider image 4"} src="/slide4.jpg" fill={true}/>
+                {/*<p className="legend">Legend 3</p>*/}
+            </div>
+            <div className="h-96 lg:h-screen">
+                <Image alt={"slider image 5"} src="/slide5.png" fill={true}/>
                 {/*<p className="legend">Legend 3</p>*/}
             </div>
         </Carousel>

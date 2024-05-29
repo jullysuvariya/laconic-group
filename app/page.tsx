@@ -3,7 +3,7 @@
 import Header from "@/components/Header"
 import ImageCarousel from "@/components/ImageCarousel";
 import ProductRow, { ProductRowProps } from "@/components/ProductRow";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AboutUs from "@/components/AboutUs";
 import GroupOfCompanies from "@/components/GroupOfCompanies";
 import CompanyPurpose from "@/components/CompanyPurpose";
@@ -94,7 +94,7 @@ const PRODUCTS: ProductRowProps[] = [
         title: "Electrical Appliances",
         subtitle: "Collection",
         description: "We has woven a tapestry of trust with its customers, offering state-of-the-art electrical lifestyle solutions that make their life simple and experiences better. Trust is our currency, earned through years of dedicated service and a commitment to excellence. With millions of satisfied customers worldwide, we've become synonymous with reliability and quality that stands the test of time.",
-        image: "/marble.jpeg",
+        image: "/appliances.jpg",
         sizes: {
             "": ["Fans", "Heater", "LED Lightings", "Iron & Kettle", "MCB & ELCB", "Electric Wires & Cables"]
         },
@@ -105,13 +105,27 @@ const PRODUCTS: ProductRowProps[] = [
 
 export default function Home() {
 
+    const [isAnimatingOut, setIsAnimatingOut] = useState(false);
+
+
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            const loader = document.getElementById('globalLoader');
-            if (loader)
-                loader.remove();
+            setIsAnimatingOut(true);
         }
     }, []);
+
+    useEffect(() => {
+        if (isAnimatingOut) {
+            const loader = document.getElementById('globalLoader');
+            if (loader) {
+                loader.addEventListener('animationend', () => {
+                    loader.remove();
+                });
+            }
+        }
+    }, [isAnimatingOut]);
+
+
 
     useEffect(() => {
         window.onload = function () {
@@ -128,43 +142,46 @@ export default function Home() {
             }
         };
     }, []);
-// bg-gradient-to-b via-60% via-white from-white to-primary-500
-    return (<>
-        <div id="globalLoader" className="flex items-center justify-center fixed z-50 bg-primary w-screen h-screen">
-            <TextShimmerDemo />
-        </div>
-        <div className="flex flex-col justify-between">
-            <Header />
-            <main>
-                {/* <section className="h-screen">
+    // bg-gradient-to-b via-60% via-white from-white to-primary-500
+    return (
+        <>
+            <div id="globalLoader" className={`fixed z-50 bg-primary-500 w-screen h-screen ${isAnimatingOut && 'animate-slideout' }`}>
+                <div className="w-full h-full bg-primary flex items-center justify-center animate-slidein">
+                    <TextShimmerDemo />
+                </div>
+            </div>
+            <div className="flex flex-col justify-between">
+                <Header />
+                <main>
+                    {/* <section className="h-screen">
                     <TextShimmerDemo />
                 </section> */}
-                <section className="relative lg:h-screen">
-                    <ImageCarousel />
-                </section>
-                <AboutUs />
-                <GroupOfCompanies />
-                <div id="products">
-                    {PRODUCTS.map((product, index: number) => {
-                        return <section className="relative lg:h-screen" key={product.title}>
-                            <ProductRow
-                                key={product.title}
-                                title={product.title}
-                                subtitle={product.subtitle}
-                                description={product.description}
-                                image={product.image}
-                                sizes={product.sizes}
-                                linkHref={product.linkHref}
-                                linkText={product.linkText}
-                                reverseRow={index % 2 == 1}
-                            />
-                        </section>
-                    })}
-                </div>
-                <CompanyPurpose />
-                <Footer />
-            </main>
-        </div>
-    </>
+                    <section className="relative lg:h-screen">
+                        <ImageCarousel />
+                    </section>
+                    <AboutUs />
+                    <GroupOfCompanies />
+                    <div id="products">
+                        {PRODUCTS.map((product, index: number) => {
+                            return <section className="relative lg:h-screen" key={product.title}>
+                                <ProductRow
+                                    key={product.title}
+                                    title={product.title}
+                                    subtitle={product.subtitle}
+                                    description={product.description}
+                                    image={product.image}
+                                    sizes={product.sizes}
+                                    linkHref={product.linkHref}
+                                    linkText={product.linkText}
+                                    reverseRow={index % 2 == 1}
+                                />
+                            </section>
+                        })}
+                    </div>
+                    <CompanyPurpose />
+                    <Footer />
+                </main>
+            </div>
+        </>
     );
 }

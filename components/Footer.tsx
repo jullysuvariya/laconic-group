@@ -45,7 +45,16 @@ const Footer = () => {
             </div>
             <div className="flex flex-col lg:flex-row justify-between items-center p-12 lg:px-32 gap-4 text-xs from-transparent to-gray-300 bg-gradient-to-b">
                 <p>© 2024 Laconic Group</p>
-                <div className="flex flex-col lg:flex-row items-center lg:gap-2 gap-1">
+                <div className="flex">
+                    <p>Developed by:</p>&nbsp;&nbsp;
+                    <Link
+                        className="flex items-center gap-2 hover:text-primary"
+                        href="https://www.linkedin.com/in/rajsuvariya/">
+                        Raj Suvariya
+                    </Link>
+                </div>
+
+                {/* <div className="flex flex-col lg:flex-row items-center lg:gap-2 gap-1">
                     <p>Developed by: </p>
 
                     <div className="flex gap-2">
@@ -61,7 +70,7 @@ const Footer = () => {
                             Raj Suvariya
                         </Link>
                     </div>
-                </div>
+                </div> */}
             </div>
         </footer>
     )
