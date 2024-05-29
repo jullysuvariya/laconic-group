@@ -1,14 +1,9 @@
-'use client'
-
-import Header from "@/components/Header"
 import ImageCarousel from "@/components/ImageCarousel";
 import ProductRow, { ProductRowProps } from "@/components/ProductRow";
 import React, { useEffect, useState } from "react";
 import AboutUs from "@/components/AboutUs";
 import GroupOfCompanies from "@/components/GroupOfCompanies";
 import CompanyPurpose from "@/components/CompanyPurpose";
-import Footer from "@/components/Footer";
-import 'keen-slider/keen-slider.min.css'
 import { TextShimmerDemo } from "@/components/splashScreen";
 
 const PRODUCTS: ProductRowProps[] = [
@@ -88,7 +83,7 @@ const PRODUCTS: ProductRowProps[] = [
             "": ["Air Compressors", "High Pressure Pumps", "Slotting Machines", "Heavy Duty Grinders & Polishers", "Centrifugal Blowers", "Coolant Pumps", "Burner", "Switch Boards", "Electric Motors", "Welding Machines", "Lathe Machines", "Drill Machines"]
         },
         linkHref: "https://www.captainaircompressor.com/",
-        linkText: "Visit Captain Aircompressor",
+        linkText: "Visit Captain & Tulsi Industries",
     },
     {
         title: "Electrical Appliances",
@@ -151,7 +146,6 @@ export default function Home() {
                 </div>
             </div>
             <div className="flex flex-col justify-between">
-                <Header />
                 <main>
                     <section className="relative lg:h-screen">
                         <ImageCarousel />
@@ -176,7 +170,6 @@ export default function Home() {
                         })}
                     </div>
                     <CompanyPurpose />
-                    <Footer />
                 </main>
             </div>
         </>

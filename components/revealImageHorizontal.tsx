@@ -1,4 +1,4 @@
-import React, { ReactChild, ReactChildren, ReactElement, ReactNode } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion';
 
 export const RevelImgHorizontal = ({ src, className, reverseDirection }: { src: string, className?: string, reverseDirection?: boolean }) => {

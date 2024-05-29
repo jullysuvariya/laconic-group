@@ -1,4 +1,4 @@
-import React, { ReactChild, ReactChildren, ReactElement, ReactNode } from 'react'
+import React, { ReactElement } from 'react'
 import { motion } from 'framer-motion';
 
 export const RevelTextHorizontal = ({ children, className }: { children: ReactElement | ReactElement[] | string, className?: string }) => {
