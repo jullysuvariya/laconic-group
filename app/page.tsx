@@ -31,8 +31,8 @@ const PRODUCTS: ProductRowProps[] = [
         sizes: {
             "": ["181x1220mm", "230x1220mm", "230x1524mm", "310x601mm"]
         },
-        linkHref: "https://www.enrichpapers.com/",
-        linkText: "Visit Enrich Papers",
+        linkHref: "https://www.laconicsurfaces.com/",
+        linkText: "Visit Laconic Surfaces",
     },
     {
         title: "Building Materials",
@@ -43,8 +43,8 @@ const PRODUCTS: ProductRowProps[] = [
             "Bathware Collection": ["Water Closets", "Urinals", "Basins", "Sinks (Quartz Sinks, Steel Sinks)", "Faucets"],
             "Tiling Solutions": ["Adhesive", "Grout", "Admixture", "Waterproofing"]
         },
-        linkHref: "https://www.enrichpapers.com/",
-        linkText: "Visit Enrich Papers",
+        linkHref: "https://ulixocera.com/",
+        linkText: "Visit Ulixo Cera",
     },
     {
         title: "Paper & Paperboards",
@@ -65,8 +65,8 @@ const PRODUCTS: ProductRowProps[] = [
         sizes: {
             "": ["Bagasse Plates", "Bagasse Bowls", "Bagasse Compartment Plates", "Bagasse Takeaway Clamshell", "Bagasse Food Container", "Paper Cups & Bowls"]
         },
-        linkHref: "https://www.enrichpapers.com/",
-        linkText: "Visit Enrich Papers",
+        linkHref: "# ",
+        linkText: "Visit Laconic Biowares",
     },
     {
         title: "Polypack Products",
@@ -76,8 +76,8 @@ const PRODUCTS: ProductRowProps[] = [
         sizes: {
             "": ["PP Woven Fabric", "PP Bags", "PP Sacks", "PP Rope & Twine", "FIBC Bags", "Fishing Net", "PVC Chairs & Tables"]
         },
-        linkHref: "https://www.enrichpapers.com/",
-        linkText: "Visit Enrich Papers",
+        linkHref: "#",
+        linkText: "Visit Laconic Polypack",
     },
     {
         title: "Industrial Machinery & Equipments",
@@ -87,8 +87,8 @@ const PRODUCTS: ProductRowProps[] = [
         sizes: {
             "": ["Air Compressors", "High Pressure Pumps", "Slotting Machines", "Heavy Duty Grinders & Polishers", "Centrifugal Blowers", "Coolant Pumps", "Burner", "Switch Boards", "Electric Motors", "Welding Machines", "Lathe Machines", "Drill Machines"]
         },
-        linkHref: "https://www.enrichpapers.com/",
-        linkText: "Visit Enrich Papers",
+        linkHref: "https://www.captainaircompressor.com/",
+        linkText: "Visit Captain Aircompressor",
     },
     {
         title: "Electrical Appliances",
@@ -98,8 +98,8 @@ const PRODUCTS: ProductRowProps[] = [
         sizes: {
             "": ["Fans", "Heater", "LED Lightings", "Iron & Kettle", "MCB & ELCB", "Electric Wires & Cables"]
         },
-        linkHref: "https://www.enrichpapers.com/",
-        linkText: "Visit Enrich Papers",
+        linkHref: "#",
+        linkText: "Visit Laconic Appliances",
     },
 ];
 
@@ -145,7 +145,7 @@ export default function Home() {
     // bg-gradient-to-b via-60% via-white from-white to-primary-500
     return (
         <>
-            <div id="globalLoader" className={`fixed z-50 bg-primary-500 w-screen h-screen ${isAnimatingOut && 'animate-slideout' }`}>
+            <div id="globalLoader" className={`fixed z-50 bg-primary-500 w-screen h-screen ${isAnimatingOut && 'animate-slideout'}`}>
                 <div className="w-full h-full bg-primary flex items-center justify-center animate-slidein">
                     <TextShimmerDemo />
                 </div>
@@ -153,9 +153,6 @@ export default function Home() {
             <div className="flex flex-col justify-between">
                 <Header />
                 <main>
-                    {/* <section className="h-screen">
-                    <TextShimmerDemo />
-                </section> */}
                     <section className="relative lg:h-screen">
                         <ImageCarousel />
                     </section>

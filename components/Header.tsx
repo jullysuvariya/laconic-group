@@ -13,12 +13,12 @@ function classNames(...classes: string[]) {
 const products = [
     { name: 'Premium Tiles', href: 'https://laconicceramic.com/' },
     { name: 'SPC Vinyl Flooring', href: 'https://www.laconicsurfaces.com/' },
-    { name: 'Building Materials', href: '/' },
+    { name: 'Building Materials', href: 'https://ulixocera.com/' },
     { name: 'Paper & Paperboards', href: 'https://www.enrichpapers.com/' },
-    { name: 'Biowares & Sustainable Products', href: '/' },
-    { name: 'Polypack Products', href: '/' },
-    { name: 'Industrial Machinery & Equipments', href: '/' },
-    { name: 'Electrical Appliances', href: '/' },
+    { name: 'Biowares & Sustainable Products', href: '#' },
+    { name: 'Polypack Products', href: '#' },
+    { name: 'Industrial Machinery & Equipments', href: 'https://www.captainaircompressor.com/' },
+    { name: 'Electrical Appliances', href: '#' },
 ]
 
 const Header = () => {
@@ -85,7 +85,7 @@ const Header = () => {
                         </Transition>
                     </Popover>
 
-                    <Link href="/conatct" className="text-sm font-semibold leading-6 text-primary hover:text-opacity-60">
+                    <Link href="/contact" className="text-sm font-semibold leading-6 text-primary hover:text-opacity-60">
                         Contact
                     </Link>
 
@@ -96,16 +96,6 @@ const Header = () => {
                     </Button>
 
                 </Popover.Group>
-
-                <span className="relative flex group">
-                    <span className="group-hover:animate-ping absolute right-5 left-5 bottom-0 top-0 inline-flex rounded-lg bg-primary opacity-75"></span>
-                    <Button as="a" href="tel:919429653388"
-                        className="hidden lg:flex lg:flex-row px-4 py-2 text-white rounded-xl bg-primary">
-                        <MdAddIcCall />
-                        CALL US
-                    </Button>
-                </span>
-
             </nav>
             
             <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -165,7 +155,7 @@ const Header = () => {
                                 </Disclosure>
 
                                 <Link
-                                    href="/conatct"
+                                    href="/contact"
                                     className="-mx-3 block rounded-lg px-4 py-2 text-base font-medium leading-7 text-primary hover:bg-primary hover:bg-opacity-5 hover:text-opacity-60"
                                 >
                                     Contact
