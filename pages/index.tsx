@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import AboutUs from "@/components/AboutUs";
 import GroupOfCompanies from "@/components/GroupOfCompanies";
 import CompanyPurpose from "@/components/CompanyPurpose";
-import { TextShimmerDemo } from "@/components/splashScreen";
 
 const PRODUCTS: ProductRowProps[] = [
     {
@@ -100,51 +99,10 @@ const PRODUCTS: ProductRowProps[] = [
 
 export default function Home() {
 
-    const [isAnimatingOut, setIsAnimatingOut] = useState(false);
-
-
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            setIsAnimatingOut(true);
-        }
-    }, []);
-
-    useEffect(() => {
-        if (isAnimatingOut) {
-            const loader = document.getElementById('globalLoader');
-            if (loader) {
-                loader.addEventListener('animationend', () => {
-                    loader.remove();
-                });
-            }
-        }
-    }, [isAnimatingOut]);
-
-
-
-    useEffect(() => {
-        window.onload = function () {
-            console.log("window loaded");
-            // Check if the URL contains a hash (e.g., #elementId)
-            if (window.location.hash) {
-                // Get the element specified in the URL hash
-                var element = document.querySelector(window.location.hash);
-
-                // Scroll to the element if it exists
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        };
-    }, []);
     // bg-gradient-to-b via-60% via-white from-white to-primary-500
+    
     return (
         <>
-            <div id="globalLoader" className={`fixed z-50 bg-primary-500 w-screen h-screen ${isAnimatingOut && 'animate-slideout'}`}>
-                <div className="w-full h-full bg-primary flex items-center justify-center animate-slidein">
-                    <TextShimmerDemo />
-                </div>
-            </div>
             <div className="flex flex-col justify-between">
                 <main>
                     <section className="relative lg:h-screen">

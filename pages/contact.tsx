@@ -5,7 +5,6 @@ const Contact = () => {
             <div className="">
                 <img alt={"contact us image"} src="/contactUs.jpg"/>
             </div>
-
         </div>
     )
 }

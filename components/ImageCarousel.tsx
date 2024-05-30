@@ -15,6 +15,7 @@ const ImageCarousel = () => {
             showArrows={false}
             dynamicHeight={true}
             interval={2000}
+            showThumbs={false}
         >
             <div className="h-96 lg:h-screen">
                 <Image alt={"slider image 1"} src="/slide1.jpg" fill={true}/>
