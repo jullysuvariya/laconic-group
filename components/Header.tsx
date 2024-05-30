@@ -44,7 +44,7 @@ const Header = () => {
                 </div>
                 <Popover.Group className="hidden lg:flex lg:items-center lg:gap-x-12">
 
-                    <Link href="#about" className="text-sm font-semibold leading-6 text-primary hover:text-opacity-60">
+                    <Link href="#about" className="text-sm font-semibold leading-6 text-primary hover:text-opacity-60 transform transition-transform hover:-translate-y-1 hover:scale-105">
                         About
                     </Link>
 
@@ -52,7 +52,7 @@ const Header = () => {
                         <Popover.Button
                             onMouseEnter={() => setIsShowingProducts(true)}
                             onMouseLeave={() => setIsShowingProducts(false)}
-                            className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-primary hover:text-opacity-60">
+                            className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-primary hover:text-opacity-60 transform transition-transform hover:-translate-y-1 hover:scale-105">
                             Products
                             {/* <FaAngleDown className="h-4 w-4 text-primary" aria-hidden="true" /> */}
 
@@ -85,12 +85,12 @@ const Header = () => {
                         </Transition>
                     </Popover>
 
-                    <Link href="/contact" className="text-sm font-semibold leading-6 text-primary hover:text-opacity-60">
+                    <Link href="/contact" className="text-sm font-semibold leading-6 text-primary hover:text-opacity-60 transform transition-transform hover:-translate-y-1 hover:scale-105">
                         Contact
                     </Link>
 
                     <Button as="a" href="tel:919429653388"
-                        className="hidden lg:flex lg:flex-row px-4 py-2 text-white rounded-xl bg-primary hover:bg-opacity-75">
+                        className="hidden lg:flex lg:flex-row px-4 py-2 text-white rounded-xl bg-primary hover:bg-opacity-75 transform transition-transform hover:-translate-y-1 hover:scale-105">
                         <MdAddIcCall />
                         CALL US
                     </Button>

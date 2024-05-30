@@ -18,9 +18,9 @@ const Footer = () => {
                     />
                     <div className="lg:col-span-2 px-8">
                         <h3 className="max-lg:text-center font-bold leading-6 text-primary">CONTACT US</h3>
-                        <div className="mt-4 space-y-3">
+                        <div className="mt-5 space-y-3">
                             {navigation.contact.map((item, index) => (
-                                <a href={item.href} target={"_blank"} className="flex flex-row gap-4 items-center hover:text-primary" key={index}>
+                                <a href={item.href} target={"_blank"} className="flex flex-row gap-4 items-center hover:text-primary transform transition-transform hover:-translate-y-1 hover:scale-105" key={index}>
                                     {item.icon}
                                     {item.description}
                                 </a>
@@ -34,7 +34,7 @@ const Footer = () => {
                                 <a href={item.href}
                                     key={index}
                                     target={"_blank"}
-                                    className="text-xl hover:text-primary">
+                                    className="text-xl hover:text-primary transform transition-transform hover:-translate-y-1 hover:scale-105">
                                     {item.icon}
                                 </a>
                             ))}
