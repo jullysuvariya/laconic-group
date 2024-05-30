@@ -9,7 +9,7 @@ const Footer = () => {
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
-            <div className="mx-auto px-10 lg:px-32 py-14 lg:py-20">
+            <div className="mx-auto px-10 lg:px-32 pt-14 lg:pt-20 max-lg:pb-4">
                 <div className="flex flex-col lg:grid lg:grid-cols-6 gap-12 lg:gap-8">
                     <img
                         className="self-center w-6/12 lg:col-span-3"
@@ -18,7 +18,7 @@ const Footer = () => {
                     />
                     <div className="lg:col-span-2 px-8">
                         <h3 className="max-lg:text-center font-bold leading-6 text-primary">CONTACT US</h3>
-                        <div className="mt-4 space-y-4">
+                        <div className="mt-4 space-y-3">
                             {navigation.contact.map((item, index) => (
                                 <a href={item.href} target={"_blank"} className="flex flex-row gap-4 items-center hover:text-primary" key={index}>
                                     {item.icon}
@@ -81,7 +81,7 @@ const navigation = {
         {
             icon: <MdLocationOn className="flex-shrink-0 w-5 h-5" />,
             description: <p className="text-sm">
-                <strong>Corporate Office</strong> 525, Nakshtra VIII, Sadhu Vasvani Road, Rajkot - 360005.
+                <strong>Corporate Office</strong> 525, Nakshtra VIII, Sadhu Vasvani Road, Rajkot - 360005, Gujarat, India.
             </p>,
             href: "https://maps.app.goo.gl/brrKRHg4xWnQoBX68"
         },
@@ -91,14 +91,24 @@ const navigation = {
             href: "tel:919429653388"
         },
         {
-            icon: <MdEmail className="flex-shrink-0 w-5 h-5" />,
-            description: <p className="text-sm">info@laconicceramic.com</p>,
-            href: "mailto:info@laconicceramic.com"
+            icon: <MdAddIcCall className="flex-shrink-0 w-5 h-5" />,
+            description: <p className="text-sm">+91 96017 03388</p>,
+            href: "tel:919601703388"
         },
         {
             icon: <MdEmail className="flex-shrink-0 w-5 h-5" />,
-            description: <p className="text-sm">export@laconicceramic.com</p>,
-            href: "mailto:export@laconicceramic.com"
+            description: <p className="text-sm">info@laconicgroup.in</p>,
+            href: "mailto:info@laconicgroup.in"
+        },
+        {
+            icon: <MdEmail className="flex-shrink-0 w-5 h-5" />,
+            description: <p className="text-sm">sales@laconicgroup.in</p>,
+            href: "mailto:sales@laconicgroup.in"
+        },
+        {
+            icon: <MdEmail className="flex-shrink-0 w-5 h-5" />,
+            description: <p className="text-sm">export@laconicgroup.in</p>,
+            href: "mailto:export@laconicgroup.in"
         },
     ],
     social: [
