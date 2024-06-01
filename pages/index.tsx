@@ -77,7 +77,7 @@ const PRODUCTS: ProductRowProps[] = [
         title: "Industrial Machinery & Equipments",
         subtitle: "Collection",
         description: "Tingenious offerings that we put forward under the brand name which find wide applications in areas where the pneumatic air products are required. Thus, we cater to the requirements of a number of Engineering Colleges, Government Sector, Oil Mills, Cement Industry, Ceramic Industry, Sugar Industry, Forging Plants, Thermal Power Stations, Petroleum Plants, Cotton Ginning Units, Kitchenware units, Garage units, Automobile parts units, Embroidery units, Agricultural land, and several small & medium industries in India and overseas.",
-        image: "/marble.jpeg",
+        image: "/captainTulsi.jpg",
         sizes: {
             "": ["Air Compressors", "High Pressure Pumps", "Slotting Machines", "Heavy Duty Grinders & Polishers", "Centrifugal Blowers", "Coolant Pumps", "Burner", "Switch Boards", "Electric Motors", "Welding Machines", "Lathe Machines", "Drill Machines"]
         },
