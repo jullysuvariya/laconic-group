@@ -3,6 +3,49 @@ import { MdLocationOn, MdAddIcCall, MdEmail } from "react-icons/md";
 import { FaFacebookF, FaWhatsapp, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 
+const navigation = {
+    contact: [
+        {
+            icon: <MdLocationOn className="flex-shrink-0 w-5 h-5" />,
+            description: <p className="text-sm">
+                <strong>Corporate Office</strong> 525, Nakshtra VIII, Sadhu Vasvani Road, Rajkot - 360005, Gujarat, India.
+            </p>,
+            href: "https://maps.app.goo.gl/brrKRHg4xWnQoBX68"
+        },
+        {
+            icon: <MdAddIcCall className="flex-shrink-0 w-5 h-5" />,
+            description: <p className="text-sm">+91 94296 53388</p>,
+            href: "tel:919429653388"
+        },
+        {
+            icon: <MdAddIcCall className="flex-shrink-0 w-5 h-5" />,
+            description: <p className="text-sm">+91 96017 03388</p>,
+            href: "tel:919601703388"
+        },
+        {
+            icon: <MdEmail className="flex-shrink-0 w-5 h-5" />,
+            description: <p className="text-sm">info@laconicgroup.in</p>,
+            href: "mailto:info@laconicgroup.in"
+        },
+        {
+            icon: <MdEmail className="flex-shrink-0 w-5 h-5" />,
+            description: <p className="text-sm">sales@laconicgroup.in</p>,
+            href: "mailto:sales@laconicgroup.in"
+        },
+        {
+            icon: <MdEmail className="flex-shrink-0 w-5 h-5" />,
+            description: <p className="text-sm">export@laconicgroup.in</p>,
+            href: "mailto:export@laconicgroup.in"
+        },
+    ],
+    social: [
+        { icon: <FaFacebookF />, href: 'https://www.facebook.com/profile.php?id=61555548309435' },
+        { icon: <FaWhatsapp />, href: 'https://wa.me/919429653388?text=I\'m%20interested%20in%20your%20products' },
+        { icon: <FaInstagram />, href: 'https://www.instagram.com/laconic_ceramic' },
+        { icon: <FaLinkedinIn />, href: 'https://www.linkedin.com/company/laconic-ceramics/' },
+    ],
+}
+
 const Footer = () => {
     return (
         <footer className="bg-white border-t border-primary" aria-labelledby="footer-heading">
@@ -75,49 +118,5 @@ const Footer = () => {
         </footer>
     )
 }
-
-const navigation = {
-    contact: [
-        {
-            icon: <MdLocationOn className="flex-shrink-0 w-5 h-5" />,
-            description: <p className="text-sm">
-                <strong>Corporate Office</strong> 525, Nakshtra VIII, Sadhu Vasvani Road, Rajkot - 360005, Gujarat, India.
-            </p>,
-            href: "https://maps.app.goo.gl/brrKRHg4xWnQoBX68"
-        },
-        {
-            icon: <MdAddIcCall className="flex-shrink-0 w-5 h-5" />,
-            description: <p className="text-sm">+91 94296 53388</p>,
-            href: "tel:919429653388"
-        },
-        {
-            icon: <MdAddIcCall className="flex-shrink-0 w-5 h-5" />,
-            description: <p className="text-sm">+91 96017 03388</p>,
-            href: "tel:919601703388"
-        },
-        {
-            icon: <MdEmail className="flex-shrink-0 w-5 h-5" />,
-            description: <p className="text-sm">info@laconicgroup.in</p>,
-            href: "mailto:info@laconicgroup.in"
-        },
-        {
-            icon: <MdEmail className="flex-shrink-0 w-5 h-5" />,
-            description: <p className="text-sm">sales@laconicgroup.in</p>,
-            href: "mailto:sales@laconicgroup.in"
-        },
-        {
-            icon: <MdEmail className="flex-shrink-0 w-5 h-5" />,
-            description: <p className="text-sm">export@laconicgroup.in</p>,
-            href: "mailto:export@laconicgroup.in"
-        },
-    ],
-    social: [
-        { icon: <FaFacebookF />, href: 'https://www.facebook.com/profile.php?id=61555548309435' },
-        { icon: <FaWhatsapp />, href: 'https://wa.me/919429653388?text=I\'m%20interested%20in%20your%20products' },
-        { icon: <FaInstagram />, href: 'https://www.instagram.com/laconic_ceramic' },
-        { icon: <FaLinkedinIn />, href: 'https://www.linkedin.com/company/laconic-ceramics/' },
-    ],
-}
-
 
 export default Footer
