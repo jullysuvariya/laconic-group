@@ -29,10 +29,8 @@ const Header = () => {
         <header className="sticky lg:fixed top-0 left-0 right-0 z-30 bg-white">
             <nav className="mx-auto flex px-8 lg:px-64 items-center justify-between p-6" aria-label="Global">
                 <Link href="/">
-                    {/* <a > */}
                     <span className="sr-only">Laconic Group of Companies</span>
                     <img className="h-10 lg:h-14 w-auto" src="/logo.png" alt="" />
-                    {/* </a> */}
                 </Link>
                 <div className="flex lg:hidden">
                     <button
@@ -99,20 +97,20 @@ const Header = () => {
 
                 </Popover.Group>
             </nav>
-
+            
             <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                 <div className="fixed inset-0 z-30" />
                 <Dialog.Panel
                     className="fixed inset-y-0 right-0 z-40 w-full overflow-y-auto bg-white px-8 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
-                        <a href="/" className="-m-1.5 p-1.5">
+                        <Link href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">Your Company</span>
                             <img
                                 className="h-10 w-auto"
                                 src="/logo.png"
                                 alt=""
                             />
-                        </a>
+                        </Link>
                         <button
                             type="button"
                             className="-m-2.5 rounded-md p-2.5 text-primary"
