@@ -21,7 +21,7 @@ const products = [
     { name: 'Electrical Appliances', href: '/' },
 ]
 
-const Header = () => {
+const Header = ({ demoURL } : { demoURL: string }) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [isShowingProducts, setIsShowingProducts] = useState(false)
 
@@ -44,7 +44,7 @@ const Header = () => {
                 </div>
                 <Popover.Group className="hidden lg:flex lg:items-center lg:gap-x-12">
 
-                    <Link href="#about" className="text-sm font-semibold leading-6 text-primary hover:text-opacity-60 transform transition-transform hover:-translate-y-1 hover:scale-105">
+                    <Link href={demoURL} className="text-sm font-semibold leading-6 text-primary hover:text-opacity-60 transform transition-transform hover:-translate-y-1 hover:scale-105">
                         About
                     </Link>
 
@@ -125,7 +125,7 @@ const Header = () => {
                             <div className="space-y-2 py-6">
 
                                 <Link
-                                    href="#about"
+                                    href={demoURL}
                                     className="-mx-3 block rounded-lg px-4 py-2 text-base font-medium leading-7 text-primary hover:bg-primary hover:bg-opacity-5 hover:text-opacity-60"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >

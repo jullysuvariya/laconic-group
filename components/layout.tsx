@@ -51,7 +51,7 @@ export default function Layout({ children }: { children: ReactNode | ReactNode[]
                 </div>
             </div>
             <div className='flex flex-col min-h-full relative'>
-                <Header />
+                <Header demoURL={"/#about"}/>
                 <main>{children}</main>
                 <Footer />
             </div>
