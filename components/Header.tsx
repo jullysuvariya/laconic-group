@@ -15,10 +15,10 @@ const products = [
     { name: 'SPC Vinyl Flooring', href: 'https://www.laconicsurfaces.com/' },
     { name: 'Building Materials', href: 'https://ulixocera.com/' },
     { name: 'Paper & Paperboards', href: 'https://www.enrichpapers.com/' },
-    { name: 'Biowares & Sustainable Products', href: '#' },
-    { name: 'Polypack Products', href: '#' },
+    { name: 'Biowares & Sustainable Products', href: '/' },
+    { name: 'Polypack Products', href: '/' },
     { name: 'Industrial Machinery & Equipments', href: 'https://www.captainaircompressor.com/' },
-    { name: 'Electrical Appliances', href: '#' },
+    { name: 'Electrical Appliances', href: '/' },
 ]
 
 const Header = () => {
@@ -97,8 +97,8 @@ const Header = () => {
 
                 </Popover.Group>
             </nav>
-            
-            <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+
+            <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen} as="div">
                 <div className="fixed inset-0 z-30" />
                 <Dialog.Panel
                     className="fixed inset-y-0 right-0 z-40 w-full overflow-y-auto bg-white px-8 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
@@ -127,6 +127,7 @@ const Header = () => {
                                 <Link
                                     href="#about"
                                     className="-mx-3 block rounded-lg px-4 py-2 text-base font-medium leading-7 text-primary hover:bg-primary hover:bg-opacity-5 hover:text-opacity-60"
+                                    onClick={() => setMobileMenuOpen(false)}
                                 >
                                     About
                                 </Link>
@@ -157,6 +158,7 @@ const Header = () => {
                                 <Link
                                     href="/contact"
                                     className="-mx-3 block rounded-lg px-4 py-2 text-base font-medium leading-7 text-primary hover:bg-primary hover:bg-opacity-5 hover:text-opacity-60"
+                                    onClick={() => setMobileMenuOpen(false)}
                                 >
                                     Contact
                                 </Link>

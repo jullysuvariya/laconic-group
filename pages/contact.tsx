@@ -1,3 +1,5 @@
+import { RevelTextHorizontal } from "@/components/revelTextHorizonal";
+import { RevelTextVertical } from "@/components/revelTextVertical";
 import { Button } from "@nextui-org/button";
 import { motion } from "framer-motion";
 import { MdAddIcCall, MdEmail, MdLocationOn } from "react-icons/md"
@@ -57,18 +59,32 @@ const itemVariants = {
 
 const Contact = () => {
     return (
-        <div className="flex flex-col justify-between gap-32 lg:mb-32 mb-24">
-            <div className="relative flex items-center justify-center bg-fixed h-96 bg-parallax bg-cover mt-24 opacity-70">
+        <div className="flex flex-col justify-between gap-20 lg:mb-32 mb-24">
+            <div className="relative flex items-center justify-center bg-fixed h-96 bg-parallax bg-cover lg:mt-24 opacity-70">
                 <div className="w-full h-full bg-black bg-opacity-50" />
                 <h1 className="absolute z-20 text-5xl lg:text-7xl text-white font-extrabold">
                     CONTACT US
                 </h1>
+            </div>
+            <div className="flex flex-col items-center gap-10 text-center">
+                <RevelTextHorizontal className="text-2xl lg:text-4xl self-center text-center px-10 border-b-4 border-primary pb-2 lg:pb-4">
+                    Get In Touch With Us
+                </RevelTextHorizontal>
+                {/* <p className="text-primary font-bold text-3xl lg:text-4xl">Get In Touch With Us</p> */}
+                <RevelTextVertical>
+                    <p className="text-black font-extralight px-12 lg:px-64 leading-7">
+                        Our worldwide activities are coordinated from the Group&lsquo;s headquarters in Rajkot, India. Laconic Group
+                        is the group company of the Sitapara Group and consolidates all business conducted in the various
+                        businesses.
+                    </p>
+                </RevelTextVertical>
             </div>
             <div className="py-12 w-full bg-gray-100 flex lg:flex-row flex-col justify-center items-center">
                 <motion.div className="grid max-lg:grid-cols-1 grid-cols-3 px-16 lg:px-48 max-lg:gap-14"
                     variants={container}
                     initial="hidden"
                     whileInView="visible"
+                    viewport={{ once: true }}
                 >
                     {contactDetails.map((item, index) => (
                         <motion.div className="flex flex-col gap-3 items-center justify-center lg:px-8"
@@ -105,10 +121,10 @@ const Contact = () => {
                         </Button>
                     </form>
                 </div>
-                <div className='w-[90%] lg:w-[35%] h-64 bg-primary p-1 bg-opacity-20 lg:absolute left-1/2 top-[35%] self-center'>
+                <div className='w-[90%] lg:w-[35%] h-64 bg-primary p-1 bg-opacity-20 lg:absolute left-1/2 top-[35%] self-center animate-slidein'>
                     <div className="bg-white p-2 w-full h-full">
-                    <iframe className='w-full h-full' src="https://maps.google.com/maps?q=Laconic+Ceramic+Inc.+Rajkot&z=15&output=embed"></iframe>
-                </div>
+                        <iframe className='w-full h-full' src="https://maps.google.com/maps?q=Laconic+Ceramic+Inc.+Rajkot&z=15&output=embed"></iframe>
+                    </div>
                 </div>
             </div>
 
