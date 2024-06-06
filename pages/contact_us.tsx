@@ -91,9 +91,9 @@ const Contact = () => {
                 </RevelTextHorizontal>
                 {/* <p className="text-primary font-bold text-3xl lg:text-4xl">Get In Touch With Us</p> */}
                 <RevelTextVertical>
-                    <p className="text-black max-lg:text-base text-lg font-extralight px-12 lg:px-64 leading-7">
+                    <p className="text-black max-lg:text-base text-xl font-extralight px-12 lg:px-64 leading-7">
                         Our worldwide activities are coordinated from the Group&lsquo;s headquarters in Rajkot, India. Laconic Group
-                        is the group company of the Sitapara Group and consolidates all business conducted in the various
+                        is the group company of the Laconic Group and consolidates all business conducted in the various
                         businesses.
                     </p>
                 </RevelTextVertical>
