@@ -3,6 +3,8 @@ import { RevelTextVertical } from "@/components/revelTextVertical";
 import { Button } from "@nextui-org/button";
 import { motion } from "framer-motion";
 import { MdAddIcCall, MdEmail, MdLocationOn } from "react-icons/md"
+import { toast } from "react-toastify";
+import emailjs from 'emailjs-com';
 
 const contactDetails = [
     {
@@ -58,6 +60,23 @@ const itemVariants = {
 };
 
 const Contact = () => {
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        emailjs.sendForm('', '', e.target as HTMLFormElement, '')
+            .then((result) => {
+                toast.success('Submitted successfully');
+                console.log("success", result);
+                (e.target as HTMLFormElement).reset();
+
+                // window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
+            }, (error) => {
+                toast.error(error?.text);
+                console.log(error.text);
+            });
+    }
+
     return (
         <div className="flex flex-col justify-between gap-20 lg:mb-32 mb-24">
             <div className="relative flex items-center justify-center bg-fixed h-96 bg-parallax bg-cover lg:mt-24 opacity-70">
@@ -72,7 +91,7 @@ const Contact = () => {
                 </RevelTextHorizontal>
                 {/* <p className="text-primary font-bold text-3xl lg:text-4xl">Get In Touch With Us</p> */}
                 <RevelTextVertical>
-                    <p className="text-black font-extralight px-12 lg:px-64 leading-7">
+                    <p className="text-black max-lg:text-base text-lg font-extralight px-12 lg:px-64 leading-7">
                         Our worldwide activities are coordinated from the Group&lsquo;s headquarters in Rajkot, India. Laconic Group
                         is the group company of the Sitapara Group and consolidates all business conducted in the various
                         businesses.
@@ -103,18 +122,25 @@ const Contact = () => {
             <div className="flex lg:flex-row lg:relative flex-col gap-y-8">
                 <div className="bg-gray-100 py-16 px-14 lg:ml-44 flex flex-col justify-center gap-6 lg:w-1/2 w-full">
                     <p className="text-primary font-bold text-2xl">Send Us A Message</p>
-                    <form className="flex flex-col gap-4">
+                    <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
                         <div className="">
-                            <input name="name" type="text" placeholder="Name" className="px-2 py-2 text-start lg:w-2/3 w-full" />
+                            <input name="name" type="text" placeholder="Name" required className="px-2 py-2 text-start lg:w-2/3 w-full"
+                                onInvalid={(e: React.ChangeEvent<HTMLInputElement>) => { e.target.setCustomValidity("Please enter valid name") }}
+                                onInput={(e: React.ChangeEvent<HTMLInputElement>) => { e.target.setCustomValidity("") }}
+                            />
                         </div>
                         <div className="">
-                            <input name="email" type="email" placeholder="Email" className="px-2 py-2 text-start lg:w-2/3 w-full" />
+                            <input name="email" type="email" placeholder="Email" required className="px-2 py-2 text-start lg:w-2/3 w-full"
+                                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                                onInvalid={(e: React.ChangeEvent<HTMLInputElement>) => { e.target.setCustomValidity("Please enter valid email") }}
+                                onInput={(e: React.ChangeEvent<HTMLInputElement>) => { e.target.setCustomValidity("") }}
+                            />
                         </div>
                         <div className="">
-                            <input name="subjectName" type="text" placeholder="subjectName" className="px-2 py-2 text-start lg:w-2/3 w-full" />
+                            <input name="subject" type="text" placeholder="Subject" required className="px-2 py-2 text-start lg:w-2/3 w-full" />
                         </div>
                         <div className="">
-                            <textarea name="message" placeholder="Mesaage" className="px-2 py-2 text-start lg:w-2/3 w-full mb-8" rows={4} />
+                            <textarea name="message" placeholder="Mesaage" required className="px-2 py-2 text-start lg:w-2/3 w-full mb-8" rows={4} />
                         </div>
                         <Button className="px-7 py-2 text-white bg-primary rounded-full w-fit">
                             Send Message
@@ -123,7 +149,7 @@ const Contact = () => {
                 </div>
                 <div className='w-[90%] lg:w-[35%] h-64 bg-primary p-1 bg-opacity-20 lg:absolute left-1/2 top-[35%] self-center animate-slidein'>
                     <div className="bg-white p-2 w-full h-full">
-                        <iframe className='w-full h-full' src="https://maps.google.com/maps?q=Laconic+Ceramic+Inc.+Rajkot&z=15&output=embed"></iframe>
+                        <iframe className='w-full h-full' src="https://maps.google.com/maps?q=Rajkot&z=15&output=embed"></iframe>
                     </div>
                 </div>
             </div>

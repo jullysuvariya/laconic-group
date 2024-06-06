@@ -85,7 +85,7 @@ const Header = ({ demoURL } : { demoURL: string }) => {
                         </Transition>
                     </Popover>
 
-                    <Link href="/contact" className="text-sm font-semibold leading-6 text-primary hover:text-opacity-60 transform transition-transform hover:-translate-y-1 hover:scale-105">
+                    <Link href="/contact_us" className="text-sm font-semibold leading-6 text-primary hover:text-opacity-60 transform transition-transform hover:-translate-y-1 hover:scale-105">
                         Contact
                     </Link>
 
@@ -156,7 +156,7 @@ const Header = ({ demoURL } : { demoURL: string }) => {
                                 </Disclosure>
 
                                 <Link
-                                    href="/contact"
+                                    href="/contact_us"
                                     className="-mx-3 block rounded-lg px-4 py-2 text-base font-medium leading-7 text-primary hover:bg-primary hover:bg-opacity-5 hover:text-opacity-60"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
