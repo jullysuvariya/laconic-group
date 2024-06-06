@@ -86,7 +86,7 @@ const Contact = () => {
                 </h1>
             </div>
             <div className="flex flex-col items-center gap-10 text-center">
-                <RevelTextHorizontal className="text-2xl lg:text-4xl self-center text-center px-10 border-b-4 border-primary pb-2 lg:pb-4">
+                <RevelTextHorizontal className="text-2xl lg:text-5xl self-center text-center px-10 border-b-4 border-primary pb-2 lg:pb-4">
                     Get In Touch With Us
                 </RevelTextHorizontal>
                 {/* <p className="text-primary font-bold text-3xl lg:text-4xl">Get In Touch With Us</p> */}
