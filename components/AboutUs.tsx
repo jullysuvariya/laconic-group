@@ -27,19 +27,19 @@ const AboutUs = () => {
             <RevelTextVertical>
                 <h1 className="text-xl lg:text-2xl self-center text-center">
                     <strong>
-                        <motion.span ref={ref} className="text-4xl">{rounded}</motion.span><span className="text-2xl lg:text-3xl self-baseline">+</span>&nbsp; Years of Excellence with Unmatched Quality!
+                        <motion.span ref={ref} className="text-4xl">{rounded}</motion.span><span className="text-2xl lg:text-3xl self-baseline">+</span>&nbsp; Years of Unrivaled Excellence and Unmatched Quality!
                     </strong>
                 </h1>
             </RevelTextVertical>
             <RevelTextVertical>
                 <p>
-                    As a proud member of the <strong>Laconic Group of Companies</strong>, we have been a leader in innovation
-                    and quality <strong>since 1989</strong>. Our diverse product range includes ceramic and porcelain
+                    As a distinguished member of the <strong>Laconic Group of Companies</strong>, we have been at the forefront of innovation
+                    and quality <strong>since 1989</strong>. Our extensive product range encompasses ceramic and porcelain
                     tiles, SPC vinyl flooring, sanitaryware and bathware, paper and paperboards, biowares and bagasse
-                    products, PP fabric and PP bags, and industrial machinery and equipment such as air
+                    products, PP fabric and PP bags, along with industrial machinery and equipment including air
                     compressors, grinders, pressure pumps, blowers, switch boards, and more. <strong>The Laconic Group of
-                        Companies</strong> has now expanded its reach into the international market, offering top-tier products
-                    and exceptional services globally.
+                        Companies</strong> has now expanded into the international market, delivering premier products 
+                    and outstanding services worldwide.
 
                     {/* The core area business of <strong>Laconic Inc</strong> is one of the part of the <strong>Laconic Group of
                         Companies</strong> which develop and provide high-quality products such as Ceramic & Porcelain Tiles,
@@ -62,9 +62,9 @@ const AboutUs = () => {
             </RevelTextVertical>
             <RevelTextVertical>
                 <p>
-                    Our dedicated team is committed to delivering timely and precise services to our valued
+                    Our dedicated team is committed to providing timely and precise services to our valued
                     clients, ensuring satisfaction and excellence in every project. Trust us for all your needs
-                    and experience the best in quality and service.
+                    and experience unparalleled quality and service.
 
                     {/* The team at our firm are the best in their own way and it’s our word of honor that we provide timely and
                     precise service to our esteemed clients. */}
