@@ -64,7 +64,7 @@ const Contact = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        emailjs.sendForm('', '', e.target as HTMLFormElement, '')
+        emailjs.sendForm('service_yzra4aa', 'template_ky86sf9', e.target as HTMLFormElement, 'IOWmZezNam3KZAgLz')
             .then((result) => {
                 toast.success('Submitted successfully');
                 console.log("success", result);
