@@ -142,7 +142,7 @@ const Contact = () => {
                         <div className="">
                             <textarea name="message" placeholder="Mesaage" required className="px-2 py-2 text-start lg:w-2/3 w-full mb-8" rows={4} />
                         </div>
-                        <Button className="px-7 py-2 text-white bg-primary rounded-full w-fit">
+                        <Button type="submit" className="px-7 py-2 text-white bg-primary rounded-full w-fit">
                             Send Message
                         </Button>
                     </form>
