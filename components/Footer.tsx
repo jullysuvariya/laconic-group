@@ -57,7 +57,7 @@ const Footer = () => {
                     <img
                         className="self-center w-6/12 lg:col-span-3"
                         src="/logo.png"
-                        alt="Company name"
+                        alt="Laconic Group of Companies"
                     />
                     <div className="lg:col-span-2 px-8">
                         <h3 className="max-lg:text-center font-bold leading-6 text-primary">CONTACT US</h3>

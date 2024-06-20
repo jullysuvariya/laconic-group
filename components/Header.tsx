@@ -15,13 +15,13 @@ const products = [
     { name: 'SPC Vinyl Flooring', href: 'https://www.laconicsurfaces.com/' },
     { name: 'Building Materials', href: 'https://ulixocera.com/' },
     { name: 'Paper & Paperboards', href: 'https://www.enrichpapers.com/' },
-    { name: 'Biowares & Sustainable Products', href: '/' },
+    { name: 'Biowares & Sustainable Products', href: '/bioware/bioware_home' },
     { name: 'Polypack Products', href: '/' },
     { name: 'Industrial Machinery & Equipments', href: 'https://www.captainaircompressor.com/' },
     { name: 'Electrical Appliances', href: '/' },
 ]
 
-const Header = ({ demoURL } : { demoURL: string }) => {
+const Header = ({ aboutUsURL } : { aboutUsURL: string }) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [isShowingProducts, setIsShowingProducts] = useState(false)
 
@@ -44,7 +44,7 @@ const Header = ({ demoURL } : { demoURL: string }) => {
                 </div>
                 <Popover.Group className="hidden lg:flex lg:items-center lg:gap-x-12">
 
-                    <Link href={demoURL} className="text-sm font-semibold leading-6 text-primary hover:text-opacity-60 transform transition-transform hover:-translate-y-1 hover:scale-105">
+                    <Link href={aboutUsURL} className="text-sm font-semibold leading-6 text-primary hover:text-opacity-60 transform transition-transform hover:-translate-y-1 hover:scale-105">
                         About
                     </Link>
 
@@ -104,7 +104,7 @@ const Header = ({ demoURL } : { demoURL: string }) => {
                     className="fixed inset-y-0 right-0 z-40 w-full overflow-y-auto bg-white px-8 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <Link href="/" className="-m-1.5 p-1.5">
-                            <span className="sr-only">Your Company</span>
+                            <span className="sr-only">Laconic Group of Companies</span>
                             <img
                                 className="h-10 w-auto"
                                 src="/logo.png"
@@ -125,7 +125,7 @@ const Header = ({ demoURL } : { demoURL: string }) => {
                             <div className="space-y-2 py-6">
 
                                 <Link
-                                    href={demoURL}
+                                    href={aboutUsURL}
                                     className="-mx-3 block rounded-lg px-4 py-2 text-base font-medium leading-7 text-primary hover:bg-primary hover:bg-opacity-5 hover:text-opacity-60"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
