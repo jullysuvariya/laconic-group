@@ -59,7 +59,7 @@ const PRODUCTS: ProductRowProps[] = [
         sizes: {
             "": ["Bagasse Plates", "Bagasse Bowls", "Bagasse Compartment Plates", "Bagasse Takeaway Clamshell", "Bagasse Food Container", "Paper Cups & Bowls"]
         },
-        linkHref: "# ",
+        linkHref: "/bioware/bioware_home",
         linkText: "Visit Laconic Biowares",
     },
     {

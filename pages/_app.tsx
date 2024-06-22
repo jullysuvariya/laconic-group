@@ -1,12 +1,45 @@
-import Layout from '../components/layout'
 import "./globals.css"
 import 'keen-slider/keen-slider.min.css'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/router';
+import LaconicBiowareLayout from "@/layout/LaconicBiowareLayout";
+import LaconicCompanyLayout from "@/layout/LaconicCompanyLayout";
 
 export default function MyApp({ Component, pageProps }: { Component: any, pageProps: any }) {
+    // const router = useRouter();
+    // const getLayout = (pathname: string) => {
+    //     console.log("pathnmae", pathname);
+    //     if (pathname.startsWith('/bioware/')) {
+    //         return LaconicBiowareLayout;
+    //     }
+    //     return LaconicCompanyLayout;
+    // };
+    // const Layout = getLayout(router.pathname);
+
+    const pathname = usePathname();
+    if (pathname?.startsWith('/bioware/')) {
+        return (
+            <LaconicBiowareLayout>
+                <ToastContainer
+                    position="top-right"
+                    autoClose={2000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="colored"
+                />
+                <Component {...pageProps} />
+            </LaconicBiowareLayout>
+        )
+    }
     return (
-        <Layout>
+        <LaconicCompanyLayout>
             <ToastContainer
                 position="top-right"
                 autoClose={2000}
@@ -20,6 +53,6 @@ export default function MyApp({ Component, pageProps }: { Component: any, pagePr
                 theme="colored"
             />
             <Component {...pageProps} />
-        </Layout>
+        </LaconicCompanyLayout>
     )
 }
