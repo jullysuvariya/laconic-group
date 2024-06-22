@@ -1,6 +1,5 @@
 import BiowareFooter from "@/components/BiowareFooter";
 import BiowareHeader from "@/components/BiowareHeader";
-'use client'
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
@@ -20,7 +19,6 @@ const gridImages = [
     { src: "/bioware_grid_img.png", alt: "bioware image" },
     { src: "/bioware_grid_img.png", alt: "bioware image" },
 ]
-
 
 const BiowareHome = () => {
     return (
@@ -94,4 +92,3 @@ const BiowareHome = () => {
 }
 
 export default BiowareHome;
-

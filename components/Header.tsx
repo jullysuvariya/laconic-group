@@ -73,13 +73,13 @@ const Header = ({ aboutUsURL } : { aboutUsURL: string }) => {
                                 onMouseLeave={() => setIsShowingProducts(false)}
                                 className="absolute -left-8 top-full z-10 mt-5 w-72 p-3 rounded-xl bg-white shadow-xl outline outline-gray-50">
                                 {products.map((item) => (
-                                    <Link
+                                    <a
                                         key={item.name}
                                         href={item.href}
                                         className="block py-2 px-4 rounded-lg hover:bg-primary hover:bg-opacity-5 text-sm font-medium leading-6 text-primary hover:text-opacity-60"
                                     >
                                         {item.name}
-                                    </Link>
+                                    </a>
                                 ))}
                             </Popover.Panel>
                         </Transition>

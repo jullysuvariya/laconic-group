@@ -7,10 +7,7 @@ export default function Layout({ children }: { children: ReactNode | ReactNode[]
 
     const [isAnimatingOut, setIsAnimatingOut] = useState(false);
 
-    console.log("coming here 1");
-
     useEffect(() => {
-        console.log("coming here 2")
         if (typeof window !== 'undefined') {
             setIsAnimatingOut(true);
         }
@@ -29,7 +26,6 @@ export default function Layout({ children }: { children: ReactNode | ReactNode[]
 
     useEffect(() => {
         window.onload = function () {
-            console.log("window loaded");
             // Check if the URL contains a hash (e.g., #elementId)
             if (window.location.hash) {
                 // Get the element specified in the URL hash
@@ -45,7 +41,7 @@ export default function Layout({ children }: { children: ReactNode | ReactNode[]
 
     return (
         <>
-            <div id="globalLoader" className={`fixed z-50 bg-primary-500 w-screen h-screen ${isAnimatingOut && 'animate-slideout'}`}>
+            <div id="globalLoader" className={`fixed z-50 bg-primary-500 w-full h-screen ${isAnimatingOut && 'animate-slideout'}`}>
                 <div className="w-full h-full bg-primary flex items-center justify-center animate-slidein">
                     <TextShimmerDemo />
                 </div>

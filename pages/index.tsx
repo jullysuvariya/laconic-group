@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import AboutUs from "@/components/AboutUs";
 import GroupOfCompanies from "@/components/GroupOfCompanies";
 import CompanyPurpose from "@/components/CompanyPurpose";
+import LaconicCompanyLayout from "@/layout/LaconicCompanyLayout";
 
 const PRODUCTS: ProductRowProps[] = [
     {
@@ -110,7 +111,7 @@ export default function Home() {
                     </section>
                     <AboutUs />
                     <GroupOfCompanies />
-                    <div id="products">
+                    <div id="products" className="w-full overflow-x-hidden">
                         {PRODUCTS.map((product, index: number) => {
                             return <section className="relative lg:h-screen" key={product.title}>
                                 <ProductRow
