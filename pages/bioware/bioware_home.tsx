@@ -61,7 +61,7 @@ const BiowareHome = () => {
                         <h1 className="text-3xl font-semibold">WELCOME TO LACONIC BIOWARE</h1>
                     </div>
                     <p className="text-base font-light">
-                        Redwing Bioware is eco- friendly best baggase product manufacturer in India that specializes
+                        Laconic Bioware is eco- friendly best baggase product manufacturer in India that specializes
                         in producing high-quality, eco-friendly plates for both personal and commercial use. We make
                         sustainable tableware products that are 100% eco-friendly and biodegradable. Our company is
                         committed to using sustainable materials and processes in all aspects of our business, from
@@ -89,7 +89,7 @@ const BiowareHome = () => {
                 <div className="bg-primary text-center text-white pt-72 pb-44 gap-8 flex flex-col -my-28 ">
                     <h6 className="text-4xl font-semibold">Our Product</h6>
                     <p className="text-base font-light px-64">
-                        Redwing is more than just a tableware baggase products manufacturer. We are a team of individuals
+                        Laconic is more than just a tableware baggase products manufacturer. We are a team of individuals
                         who are passionate about the environment and committed to finding sustainable solutions for
                         everyday needs.
                     </p>
