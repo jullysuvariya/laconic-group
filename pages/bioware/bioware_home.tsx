@@ -5,20 +5,29 @@ import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
-const carouselImages = [
-    { src: "/slide1.jpg", alt: "slider image 1" },
-    { src: "/slide2.jpg", alt: "slider image 2" },
-    { src: "/slide3.jpg", alt: "slider image 3" },
-    { src: "/slide4.jpg", alt: "slider image 4" },
-    { src: "/slide5.png", alt: "slider image 5" },
-]
-
-const gridImages = [
-    { src: "/bioware_grid_img.png", alt: "bioware image" },
-    { src: "/bioware_grid_img.png", alt: "bioware image" },
-    { src: "/bioware_grid_img.png", alt: "bioware image" },
-    { src: "/bioware_grid_img.png", alt: "bioware image" },
-]
+const images = {
+    carouselImages: [
+        { src: "/slide1.jpg", alt: "slider image 1" },
+        { src: "/slide2.jpg", alt: "slider image 2" },
+        { src: "/slide3.jpg", alt: "slider image 3" },
+        { src: "/slide4.jpg", alt: "slider image 4" },
+        { src: "/slide5.png", alt: "slider image 5" },
+    ],
+    gridImages: [
+        { src: "/bioware_grid_img.png", alt: "bioware image" },
+        { src: "/bioware_grid_img.png", alt: "bioware image" },
+        { src: "/bioware_grid_img.png", alt: "bioware image" },
+        { src: "/bioware_grid_img.png", alt: "bioware image" },
+    ],
+    gridProductsImage: [
+        { src: "/bioware_grid_product.png", alt: "bioware product image" },
+        { src: "/bioware_grid_product.png", alt: "bioware product image" },
+        { src: "/bioware_grid_product.png", alt: "bioware product image" },
+        { src: "/bioware_grid_product.png", alt: "bioware product image" },
+        { src: "/bioware_grid_product.png", alt: "bioware product image" },
+        { src: "/bioware_grid_product.png", alt: "bioware product image" },
+    ]
+}
 
 const BiowareHome = () => {
     return (
@@ -34,7 +43,7 @@ const BiowareHome = () => {
                 interval={2000}
                 showThumbs={false}
             >
-                {carouselImages.map((item, index) => {
+                {images.carouselImages.map((item, index) => {
                     return (
                         <div className="h-96 lg:h-screen" key={index}>
                             <Image alt={item.alt} src={item.src} fill={true} />
@@ -67,23 +76,32 @@ const BiowareHome = () => {
                     <button className="bg-white text-primary px-6 py-2 w-fit rounded-md mt-6">Read More</button>
                 </div>
             </div>
-            <div className="mt-28">
+            <div className="my-24 relative">
                 <div className="grid grid-cols-4 gap-4 px-2">
-                    {gridImages.map((item, index) => {
+                    {images.gridImages.map((item, index) => {
                         return (
-                            <div className="" key={index}>
+                            <div className={`z-10 ${index%2 ==0 ? "translate-y-[15%]" : " "}`} key={index}>
                                 <img alt={item.alt} src={item.src} />
                             </div>
                         )
                     })}
                 </div>
-                <div className="bg-primary text-center text-white pt-80 pb-32 gap-8 flex flex-col">
+                <div className="bg-primary text-center text-white pt-72 pb-44 gap-8 flex flex-col -my-28 ">
                     <h6 className="text-4xl font-semibold">Our Product</h6>
                     <p className="text-base font-light px-64">
-                        Redwing is more than just a tableware baggase products manufacturer. We are a team of individuals 
-                        who are passionate about the environment and committed to finding sustainable solutions for 
+                        Redwing is more than just a tableware baggase products manufacturer. We are a team of individuals
+                        who are passionate about the environment and committed to finding sustainable solutions for
                         everyday needs.
                     </p>
+                </div>
+                <div className="bg-gray-100 border-solid border mx-40 px-2 py-14 grid grid-cols-6 items-center">
+                    {images.gridProductsImage.map((item, index) => {
+                        return (
+                            <div className="flex justify-center" key={index}>
+                                <img alt={item.alt} src={item.src} className="w-4/5 h-4/5" />
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
 
