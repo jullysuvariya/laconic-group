@@ -81,9 +81,9 @@ const Contact = () => {
         <div className="flex flex-col justify-between gap-20 lg:mb-32 mb-24">
             <div className="relative flex items-center justify-center bg-fixed h-96 bg-parallax bg-cover lg:mt-24 opacity-70">
                 <div className="w-full h-full bg-black bg-opacity-50" />
-                <h1 className="absolute z-20 text-5xl lg:text-7xl text-white font-extrabold">
+                <RevelTextVertical className="absolute z-20 text-5xl lg:text-7xl text-white font-extrabold">
                     CONTACT US
-                </h1>
+                </RevelTextVertical>
             </div>
             <div className="flex flex-col items-center gap-10 text-center">
                 <RevelTextHorizontal className="text-2xl lg:text-5xl self-center text-center px-10 border-b-4 border-primary pb-2 lg:pb-4">

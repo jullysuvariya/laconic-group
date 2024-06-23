@@ -48,9 +48,9 @@ const BiowareAbout = () => {
         <div className="flex flex-col justify-between">
             <div className="relative flex items-center justify-center bg-fixed h-96 bg-parallax bg-cover lg:mt-24 opacity-70">
                 <div className="w-full h-full bg-black bg-opacity-50" />
-                <h1 className="absolute z-20 text-5xl lg:text-7xl text-white font-extrabold">
+                <RevelTextVertical className="absolute z-20 text-5xl lg:text-7xl text-white font-extrabold">
                     ABOUT US
-                </h1>
+                </RevelTextVertical>
             </div>
 
             <div className="flex flex-col px-16 py-10 lg:px-64 justify-center text-center lg:text-lg gap-8 lg:mt-20">
