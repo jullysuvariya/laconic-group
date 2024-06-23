@@ -1,7 +1,6 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import { TextShimmerDemo } from '@/components/splashScreen';
-import { ReactNode, useEffect, useState } from 'react'
+import { ReactNode } from 'react'
 
 export default function Layout({ children }: { children: ReactNode | ReactNode[] }) {
 
