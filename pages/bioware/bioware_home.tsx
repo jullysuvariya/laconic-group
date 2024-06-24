@@ -90,11 +90,11 @@ const BiowareHome = () => {
                         everyday needs.
                     </p>
                 </div>
-                <div className="bg-gray-100 border-solid border mx-40 px-2 py-10 grid grid-cols-6 items-center">
+                <div className="bg-gray-100 border-solid border mx-40 px-3 py-12 grid grid-cols-6 items-center">
                     {images.gridProductsImage.map((item, index) => {
                         return (
                             <div className="flex justify-center" key={index}>
-                                <img alt={item.alt} src={item.src} className="w-[70%] h-[70%]" />
+                                <img alt={item.alt} src={item.src} className="w-11/12 h-11/12" />
                             </div>
                         )
                     })}
