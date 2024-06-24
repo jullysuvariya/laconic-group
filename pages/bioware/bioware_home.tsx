@@ -15,14 +15,21 @@ const images = {
         { src: "/bioware_grid_img3.png", alt: "bioware image" },
         { src: "/bioware_grid_img4.jpg", alt: "bioware image" },
     ],
-    gridProductsImage: [
+    gridProductsBagasse: [
         { src: "/bioware_grid_product1.png", alt: "bioware product image" },
         { src: "/bioware_grid_product2.png", alt: "bioware product image" },
         { src: "/bioware_grid_product3.png", alt: "bioware product image" },
         { src: "/bioware_grid_product4.png", alt: "bioware product image" },
         { src: "/bioware_grid_product5.png", alt: "bioware product image" },
         { src: "/bioware_grid_product6.png", alt: "bioware product image" },
-    ]
+    ],
+    gridProducts: [
+        { src: "/bioware_product1.png", alt: "bioware product image", name: "PLATES" },
+        { src: "/bioware_product2.png", alt: "bioware product image", name: "BOWLS" },
+        { src: "/bioware_product3.png", alt: "bioware product image", name: "COMPARTMENT PLATES" },
+        { src: "/bioware_product4.png", alt: "bioware product image", name: "FOOD CONTAINER" },
+        { src: "/bioware_product5.png", alt: "bioware product image", name: "TAKEAWAY CLAMSHELL" },
+    ],
 }
 
 const BiowareHome = () => {
@@ -72,11 +79,11 @@ const BiowareHome = () => {
                     <button className="bg-white text-primary2 px-6 py-2 w-fit rounded-md mt-6">Read More</button>
                 </div>
             </div>
-            <div className="my-24 relative">
+            <div className="my-24 relative flex flex-col">
                 <div className="grid grid-cols-4 gap-4 px-2">
                     {images.gridImages.map((item, index) => {
                         return (
-                            <div className={`z-10 ${index%2 ==0 ? "translate-y-[15%]" : " "}`} key={index}>
+                            <div className={`z-10 ${index % 2 == 0 ? "translate-y-[15%]" : " "}`} key={index}>
                                 <img alt={item.alt} src={item.src} />
                             </div>
                         )
@@ -91,7 +98,7 @@ const BiowareHome = () => {
                     </p>
                 </div>
                 <div className="bg-gray-100 border-solid border mx-40 px-3 py-12 grid grid-cols-6 items-center">
-                    {images.gridProductsImage.map((item, index) => {
+                    {images.gridProductsBagasse.map((item, index) => {
                         return (
                             <div className="flex justify-center" key={index}>
                                 <img alt={item.alt} src={item.src} className="w-11/12 h-11/12" />
@@ -99,6 +106,28 @@ const BiowareHome = () => {
                         )
                     })}
                 </div>
+                <div className="grid grid-cols-3 grid-rows-2 px-40 mt-20 gap-y-14 justify-items-center">
+                    {images.gridProducts.map((item, index) => {
+                        return (
+                            <div className="bg-primary2 w-80 h-36 rounded-tl-xl rounded-b-[70px] rounded-tr-[95px] flex flex-row items-center"
+                                key="index"
+                            >
+                                <div className="w-1/2 text-center">
+                                    <span className="text-white font-bold text-xl">{item.name}</span>
+                                </div>
+                                <img src={item.src} alt={item.alt} className="w-32 h-32 self-start ml-10 -translate-y-5" />
+                            </div>
+                        )
+                    })}
+                </div>
+                <button className="bg-primary2 text-white px-20 py-2 rounded-md mt-16 w-fit self-center">
+                    <a href="/Laconic Biowares Catalog - Laconic Group.pdf" download="Laconic Biowares Catalog - Laconic Group.pdf" target="_blank">
+                        Download Brochure
+                    </a>
+                </button>
+            </div>
+            <div className="">
+                
             </div>
 
         </div>
