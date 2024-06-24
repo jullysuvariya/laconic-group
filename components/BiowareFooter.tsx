@@ -24,8 +24,8 @@ const navigation = {
         },
         {
             icon: <MdEmail className="flex-shrink-0 w-5 h-5" />,
-            description: <p className="text-sm">biowares@laconocgroup.in</p>,
-            href: "mailto:biowares@laconocgroup.in"
+            description: <p className="text-sm">biowares@laconicgroup.in</p>,
+            href: "mailto:biowares@laconicgroup.in"
         },
     ],
     social: [
@@ -38,7 +38,7 @@ const navigation = {
 
 const BiowareFooter = () => {
     return (
-        <footer className="bg-white border-t border-primary" aria-labelledby="footer-heading">
+        <footer className="bg-white border-t border-primary2" aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
@@ -46,14 +46,14 @@ const BiowareFooter = () => {
                 <div className="flex flex-col lg:grid lg:grid-cols-6 gap-12 lg:gap-8">
                     <img
                         className="self-center w-6/12 lg:col-span-3"
-                        src="/laconicBiowaresLogoBlue.png"
+                        src="/logo_LaconicBiowaresGreen.png"
                         alt="Laconic Biowares"
                     />
                     <div className="lg:col-span-2 px-8">
-                        <h3 className="max-lg:text-center font-bold leading-6 text-primary">CONTACT US</h3>
+                        <h3 className="max-lg:text-center font-bold leading-6 text-primary2">CONTACT US</h3>
                         <div className="mt-5 space-y-3">
                             {navigation.contact.map((item, index) => (
-                                <a href={item.href} target={"_blank"} className="flex flex-row gap-4 items-center hover:text-primary transform transition-transform hover:-translate-y-1 hover:scale-105" key={index}>
+                                <a href={item.href} target={"_blank"} className="flex flex-row gap-4 items-center hover:text-primary2 transform transition-transform hover:-translate-y-1 hover:scale-105" key={index}>
                                     {item.icon}
                                     {item.description}
                                 </a>
@@ -61,13 +61,13 @@ const BiowareFooter = () => {
                         </div>
                     </div>
                     <div>
-                        <h3 className="max-lg:text-center font-bold leading-6 text-primary">FOLLOW US</h3>
+                        <h3 className="max-lg:text-center font-bold leading-6 text-primary2">FOLLOW US</h3>
                         <div className="mt-6 flex max-lg:justify-center gap-4">
                             {navigation.social.map((item, index) => (
                                 <a href={item.href}
                                     key={index}
                                     target={"_blank"}
-                                    className="text-xl hover:text-primary transform transition-transform hover:-translate-y-1 hover:scale-105">
+                                    className="text-xl hover:text-primary2 transform transition-transform hover:-translate-y-1 hover:scale-105">
                                     {item.icon}
                                 </a>
                             ))}
@@ -81,7 +81,7 @@ const BiowareFooter = () => {
                 <div className="flex">
                     <p>Developed by:</p>&nbsp;&nbsp;
                     <Link
-                        className="flex items-center gap-2 hover:text-primary"
+                        className="flex items-center gap-2 hover:text-primary2"
                         href="https://www.linkedin.com/in/rajsuvariya/">
                         Raj Suvariya
                     </Link>
@@ -92,13 +92,13 @@ const BiowareFooter = () => {
 
                     <div className="flex gap-2">
                         <Link
-                            className="flex items-center gap-2 hover:text-primary"
+                            className="flex items-center gap-2 hover:text-primary2"
                             href="https://www.linkedin.com/in/jully-suvariya-9b632023b/">
                             Jully Suvariya
                         </Link>
                         <p>&</p>
                         <Link
-                            className="flex items-center gap-2 hover:text-primary"
+                            className="flex items-center gap-2 hover:text-primary2"
                             href="https://www.linkedin.com/in/rajsuvariya/">
                             Raj Suvariya
                         </Link>

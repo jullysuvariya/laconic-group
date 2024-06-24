@@ -1,5 +1,3 @@
-import BiowareFooter from "@/components/BiowareFooter";
-import BiowareHeader from "@/components/BiowareHeader";
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
@@ -7,25 +5,23 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 
 const images = {
     carouselImages: [
-        { src: "/slide1.jpg", alt: "slider image 1" },
-        { src: "/slide2.jpg", alt: "slider image 2" },
-        { src: "/slide3.jpg", alt: "slider image 3" },
-        { src: "/slide4.jpg", alt: "slider image 4" },
-        { src: "/slide5.png", alt: "slider image 5" },
+        { src: "/slider1.png", alt: "slider image 1" },
+        { src: "/slider2.png", alt: "slider image 2" },
+        { src: "/slider3.png", alt: "slider image 3" },
     ],
     gridImages: [
-        { src: "/bioware_grid_img.png", alt: "bioware image" },
-        { src: "/bioware_grid_img.png", alt: "bioware image" },
-        { src: "/bioware_grid_img.png", alt: "bioware image" },
-        { src: "/bioware_grid_img.png", alt: "bioware image" },
+        { src: "/bioware_grid_img1.png", alt: "bioware image" },
+        { src: "/bioware_grid_img2.png", alt: "bioware image" },
+        { src: "/bioware_grid_img3.png", alt: "bioware image" },
+        { src: "/bioware_grid_img4.jpg", alt: "bioware image" },
     ],
     gridProductsImage: [
-        { src: "/bioware_grid_product.png", alt: "bioware product image" },
-        { src: "/bioware_grid_product.png", alt: "bioware product image" },
-        { src: "/bioware_grid_product.png", alt: "bioware product image" },
-        { src: "/bioware_grid_product.png", alt: "bioware product image" },
-        { src: "/bioware_grid_product.png", alt: "bioware product image" },
-        { src: "/bioware_grid_product.png", alt: "bioware product image" },
+        { src: "/bioware_grid_product1.png", alt: "bioware product image" },
+        { src: "/bioware_grid_product2.png", alt: "bioware product image" },
+        { src: "/bioware_grid_product3.png", alt: "bioware product image" },
+        { src: "/bioware_grid_product4.png", alt: "bioware product image" },
+        { src: "/bioware_grid_product5.png", alt: "bioware product image" },
+        { src: "/bioware_grid_product6.png", alt: "bioware product image" },
     ]
 }
 
@@ -55,7 +51,7 @@ const BiowareHome = () => {
                 <div className="absolute z-10 mr-12 translate-y-1/2 translate-x-10">
                     <img src="/bioware_1.jpeg" alt="bioware image" className="w-[91%]" />
                 </div>
-                <div className="bg-primary py-12 pl-48 pr-10 flex flex-col text-white gap-7 w-[60%] translate-x-[53%]">
+                <div className="bg-primary2 py-12 pl-48 pr-10 flex flex-col text-white gap-7 w-[60%] translate-x-[53%]">
                     <div>
                         <h6 className="mb-1">ABOUT US</h6>
                         <h1 className="text-3xl font-semibold">WELCOME TO LACONIC BIOWARE</h1>
@@ -73,7 +69,7 @@ const BiowareHome = () => {
                         that our plates are biodegradable, meaning they can be safely broken down and returned to the
                         earth without causing harm.
                     </p>
-                    <button className="bg-white text-primary px-6 py-2 w-fit rounded-md mt-6">Read More</button>
+                    <button className="bg-white text-primary2 px-6 py-2 w-fit rounded-md mt-6">Read More</button>
                 </div>
             </div>
             <div className="my-24 relative">
@@ -86,7 +82,7 @@ const BiowareHome = () => {
                         )
                     })}
                 </div>
-                <div className="bg-primary text-center text-white pt-72 pb-44 gap-8 flex flex-col -my-28 ">
+                <div className="bg-primary2 text-center text-white pt-72 pb-44 gap-8 flex flex-col -my-28 ">
                     <h6 className="text-4xl font-semibold">Our Product</h6>
                     <p className="text-base font-light px-64">
                         Laconic is more than just a tableware baggase products manufacturer. We are a team of individuals
@@ -94,11 +90,11 @@ const BiowareHome = () => {
                         everyday needs.
                     </p>
                 </div>
-                <div className="bg-gray-100 border-solid border mx-40 px-2 py-14 grid grid-cols-6 items-center">
+                <div className="bg-gray-100 border-solid border mx-40 px-2 py-10 grid grid-cols-6 items-center">
                     {images.gridProductsImage.map((item, index) => {
                         return (
                             <div className="flex justify-center" key={index}>
-                                <img alt={item.alt} src={item.src} className="w-4/5 h-4/5" />
+                                <img alt={item.alt} src={item.src} className="w-[70%] h-[70%]" />
                             </div>
                         )
                     })}

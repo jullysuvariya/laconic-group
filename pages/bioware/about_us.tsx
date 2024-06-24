@@ -54,10 +54,10 @@ const BiowareAbout = () => {
             </div>
 
             <div className="flex flex-col px-16 py-10 lg:px-64 justify-center text-center lg:text-lg gap-8 lg:mt-20">
-                <RevelTextHorizontal className="max-lg:mt-10 flex flex-col items-center text-3xl lg:text-6xl self-center text-center px-10 border-b-4 border-primary mb-6 lg:mb-16 pb-4 lg:pb-8">
+                <RevelTextHorizontal className="max-lg:mt-10 flex flex-col items-center text-3xl lg:text-6xl self-center text-center px-10 border-b-4 border-primary2 mb-6 lg:mb-16 pb-4 lg:pb-8">
                     Legacy of Excellence
                 </RevelTextHorizontal>
-                {/* <div className="border-b-4 border-primary mb-8 lg:mb-16"></div> */}
+                {/* <div className="border-b-4 border-primary2 mb-8 lg:mb-16"></div> */}
                 <RevelTextVertical>
                     <h1 className="text-xl lg:text-2xl self-center text-center">
                         <strong>
@@ -110,7 +110,7 @@ const BiowareAbout = () => {
 
                 <RevelDivHorizontal className="flex flex-col items-center gap-4">
                     <h6 className="self-center text-base lg:text-3xl font-light">Our</h6>
-                    <h1 className="text-3xl lg:text-6xl self-center mb-8 lg:mb-16 text-center border-b-4 border-primary pb-4 lg:pb-8 px-10">
+                    <h1 className="text-3xl lg:text-6xl self-center mb-8 lg:mb-16 text-center border-b-4 border-primary2 pb-4 lg:pb-8 px-10">
                         Core Principles
                     </h1>
                 </RevelDivHorizontal>

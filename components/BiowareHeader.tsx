@@ -18,12 +18,12 @@ const BiowareHeader = () => {
             <nav className="mx-auto flex px-8 lg:px-64 items-center justify-between p-6" aria-label="Global">
                 <Link href="/bioware/bioware_home">
                     <span className="sr-only">Laconic Biowares</span>
-                    <img className="h-10 lg:h-14 w-auto" src="/laconicBiowaresLogoBlue.png" alt="" />
+                    <img className="h-10 lg:h-14 w-auto" src="/logo_LaconicBiowaresGreen.png" alt="" />
                 </Link>
                 <div className="flex lg:hidden">
                     <button
                         type="button"
-                        className="-m-2.5 inline-flex items-center text-primary justify-center rounded-md p-2.5"
+                        className="-m-2.5 inline-flex items-center text-primary2 justify-center rounded-md p-2.5"
                         onClick={() => setMobileMenuOpen(true)}
                     >
                         <span className="sr-only">Open main menu</span>
@@ -32,20 +32,20 @@ const BiowareHeader = () => {
                 </div>
                 <Popover.Group className="hidden lg:flex lg:items-center lg:gap-x-12">
 
-                    <Link href="/" className="text-sm font-semibold leading-6 text-primary hover:text-opacity-60 transform transition-transform hover:-translate-y-1 hover:scale-105">
+                    <Link href="/" className="text-sm font-semibold leading-6 text-primary2 hover:text-opacity-60 transform transition-transform hover:-translate-y-1 hover:scale-105">
                         Home
                     </Link>
 
-                    <Link href="/bioware/about_us" className="text-sm font-semibold leading-6 text-primary hover:text-opacity-60 transform transition-transform hover:-translate-y-1 hover:scale-105">
+                    <Link href="/bioware/about_us" className="text-sm font-semibold leading-6 text-primary2 hover:text-opacity-60 transform transition-transform hover:-translate-y-1 hover:scale-105">
                         About
                     </Link>
 
-                    <Link href="/bioware/contact_us" className="text-sm font-semibold leading-6 text-primary hover:text-opacity-60 transform transition-transform hover:-translate-y-1 hover:scale-105">
+                    <Link href="/bioware/contact_us" className="text-sm font-semibold leading-6 text-primary2 hover:text-opacity-60 transform transition-transform hover:-translate-y-1 hover:scale-105">
                         Contact
                     </Link>
 
                     <Button as="a" href="tel:919429653388"
-                        className="hidden lg:flex lg:flex-row px-4 py-2 text-white rounded-xl bg-primary hover:bg-opacity-75 transform transition-transform hover:-translate-y-1 hover:scale-105">
+                        className="hidden lg:flex lg:flex-row px-4 py-2 text-white rounded-xl bg-primary2 hover:bg-opacity-75 transform transition-transform hover:-translate-y-1 hover:scale-105">
                         <MdAddIcCall />
                         CALL US
                     </Button>
@@ -62,13 +62,13 @@ const BiowareHeader = () => {
                             <span className="sr-only">Laconic Biowares</span>
                             <img
                                 className="h-10 w-auto"
-                                src="/laconicBiowaresLogoBlue.png"
+                                src="/logo_LaconicBiowaresGreen.png"
                                 alt=""
                             />
                         </Link>
                         <button
                             type="button"
-                            className="-m-2.5 rounded-md p-2.5 text-primary"
+                            className="-m-2.5 rounded-md p-2.5 text-primary2"
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             <span className="sr-only">Close menu</span>
@@ -81,7 +81,7 @@ const BiowareHeader = () => {
 
                                 <Link
                                     href="/"
-                                    className="-mx-3 block rounded-lg px-4 py-2 text-base font-medium leading-7 text-primary hover:bg-primary hover:bg-opacity-5 hover:text-opacity-60"
+                                    className="-mx-3 block rounded-lg px-4 py-2 text-base font-medium leading-7 text-primary2 hover:bg-primary2 hover:bg-opacity-5 hover:text-opacity-60"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     Home
@@ -90,7 +90,7 @@ const BiowareHeader = () => {
 
                                 <Link
                                     href="/bioware/about_us"
-                                    className="-mx-3 block rounded-lg px-4 py-2 text-base font-medium leading-7 text-primary hover:bg-primary hover:bg-opacity-5 hover:text-opacity-60"
+                                    className="-mx-3 block rounded-lg px-4 py-2 text-base font-medium leading-7 text-primary2 hover:bg-primary2 hover:bg-opacity-5 hover:text-opacity-60"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     About
@@ -98,7 +98,7 @@ const BiowareHeader = () => {
 
                                 <Link
                                     href="/bioware/contact_us"
-                                    className="-mx-3 block rounded-lg px-4 py-2 text-base font-medium leading-7 text-primary hover:bg-primary hover:bg-opacity-5 hover:text-opacity-60"
+                                    className="-mx-3 block rounded-lg px-4 py-2 text-base font-medium leading-7 text-primary2 hover:bg-primary2 hover:bg-opacity-5 hover:text-opacity-60"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     Contact
@@ -110,7 +110,7 @@ const BiowareHeader = () => {
                             <div className="py-6">
                                 <a
                                     href="tel:919429653388"
-                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-primary hover:bg-primary hover:bg-opacity-5 hover:text-opacity-60"
+                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-primary2 hover:bg-primar hover:bg-opacity-5 hover:text-opacity-60"
                                 >
                                     Call Us
                                 </a>

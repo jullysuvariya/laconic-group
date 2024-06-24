@@ -8,25 +8,25 @@ import emailjs from 'emailjs-com';
 
 const contactDetails = [
     {
-        icon: <MdLocationOn className="flex-shrink-0 w-14 h-14 text-primary" />,
+        icon: <MdLocationOn className="flex-shrink-0 w-14 h-14 text-primary2" />,
         title: <strong className="text-2xl mt-2 text-center">Corporate Office</strong>,
-        description: <a href=" https://maps.app.goo.gl/brrKRHg4xWnQoBX68" target={"_blank"} className="text-base font-thin m-auto text-center hover:text-primary transform transition-transform hover:translate-x-0 hover:scale-105">
+        description: <a href=" https://maps.app.goo.gl/brrKRHg4xWnQoBX68" target={"_blank"} className="text-base font-thin m-auto text-center hover:text-primary2 transform transition-transform hover:translate-x-0 hover:scale-105">
             525, Nakshtra VIII, Sadhu Vasvani Road, Rajkot - 360005, Gujarat, India.
         </a >,
     },
     {
-        icon: <MdAddIcCall className="flex-shrink-0 w-14 h-14 text-primary" />,
+        icon: <MdAddIcCall className="flex-shrink-0 w-14 h-14 text-primary2" />,
         title: <strong className="text-2xl mt-2 text-center">Phone</strong>,
         description: <div className="flex flex-col text-base font-thin m-auto text-center gap-1">
-            <a href="tel:919429653388" className="hover:text-primary transform transition-transform hover:translate-x-0 hover:scale-105" target={"_blank"}>+91 94296 53388</a>
-            <a href="tel:919601703388" className="hover:text-primary transform transition-transform hover:translate-x-0 hover:scale-105" target={"_blank"}>+91 96017 03388</a>
+            <a href="tel:919429653388" className="hover:text-primary2 transform transition-transform hover:translate-x-0 hover:scale-105" target={"_blank"}>+91 94296 53388</a>
+            <a href="tel:919601703388" className="hover:text-primary2 transform transition-transform hover:translate-x-0 hover:scale-105" target={"_blank"}>+91 96017 03388</a>
         </div>,
     },
     {
-        icon: <MdEmail className="flex-shrink-0 w-14 h-14 text-primary" />,
+        icon: <MdEmail className="flex-shrink-0 w-14 h-14 text-primary2" />,
         title: <strong className="text-2xl mt-2 text-center">Emails & Support</strong>,
         description: <div className="flex flex-col text-base font-thin m-auto text-center gap-1">
-            <a href="mailto:biowares@laconocgroup.in" className="hover:text-primary transform transition-transform hover:translate-x-0 hover:scale-105" target={"_blank"}>biowares@laconocgroup.in</a>
+            <a href="mailto:biowares@laconicgroup.in" className="hover:text-primary2 transform transition-transform hover:translate-x-0 hover:scale-105" target={"_blank"}>biowares@laconicgroup.in</a>
         </div>,
     },
 ]
@@ -84,10 +84,10 @@ const BiowareContact = () => {
                 </RevelTextVertical>
             </div>
             <div className="flex flex-col items-center gap-10 text-center">
-                <RevelTextHorizontal className="text-2xl lg:text-5xl self-center text-center px-10 border-b-4 border-primary pb-2 lg:pb-4">
+                <RevelTextHorizontal className="text-2xl lg:text-5xl self-center text-center px-10 border-b-4 border-primary2 pb-2 lg:pb-4">
                     Get In Touch With Us
                 </RevelTextHorizontal>
-                {/* <p className="text-primary font-bold text-3xl lg:text-4xl">Get In Touch With Us</p> */}
+                {/* <p className="text-primary2 font-bold text-3xl lg:text-4xl">Get In Touch With Us</p> */}
                 <RevelTextVertical>
                     <p className="text-black max-lg:text-base text-xl font-extralight px-12 lg:px-64 leading-7">
                         Our worldwide activities are coordinated from the Group&lsquo;s headquarters in Rajkot, India. Laconic Bioware
@@ -119,7 +119,7 @@ const BiowareContact = () => {
 
             <div className="flex lg:flex-row lg:relative flex-col gap-y-8">
                 <div className="bg-gray-100 py-16 px-14 lg:ml-44 flex flex-col justify-center gap-6 lg:w-1/2 w-full">
-                    <p className="text-primary font-bold text-2xl">Send Us A Message</p>
+                    <p className="text-primary2 font-bold text-2xl">Send Us A Message</p>
                     <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
                         <div className="">
                             <input name="name" type="text" placeholder="Name" required className="px-2 py-2 text-start lg:w-2/3 w-full"
@@ -140,12 +140,12 @@ const BiowareContact = () => {
                         <div className="">
                             <textarea name="message" placeholder="Mesaage" required className="px-2 py-2 text-start lg:w-2/3 w-full mb-8" rows={4} />
                         </div>
-                        <Button type="submit" className="px-7 py-2 text-white bg-primary rounded-full w-fit">
+                        <Button type="submit" className="px-7 py-2 text-white bg-primary2 rounded-full w-fit">
                             Send Message
                         </Button>
                     </form>
                 </div>
-                <div className='w-[90%] lg:w-[35%] h-64 bg-primary p-1 bg-opacity-20 lg:absolute left-1/2 top-[35%] self-center animate-slidein'>
+                <div className='w-[90%] lg:w-[35%] h-64 bg-primary2 p-1 bg-opacity-20 lg:absolute left-1/2 top-[35%] self-center animate-slidein'>
                     <div className="bg-white p-2 w-full h-full">
                         <iframe className='w-full h-full' src="https://maps.google.com/maps?q=Rajkot&z=15&output=embed"></iframe>
                     </div>
