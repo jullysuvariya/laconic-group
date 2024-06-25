@@ -38,8 +38,7 @@ const SafeEnvironment = () => {
                         <RevelDivHorizontal
                             reverseDirection={index % 2 == 0}
                             className="flex flex-col justify-center w-2/5 px-10 h-96 bg-primary2 text-white">
-                            <div
-                                className="flex flex-col justify-center gap-8">
+                            <div className="flex flex-col justify-center gap-8">
                                 <div className="flex flex-col max-lg:text-center gap-1 lg:gap-2">
                                     <h1 className="font-thin text-sm" >{item.subtitle}</h1>
                                     <h1 className="font-bold text-3xl">{item.title}</h1>
