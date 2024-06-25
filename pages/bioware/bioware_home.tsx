@@ -4,6 +4,7 @@ import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { FaDownload } from "react-icons/fa";
 import SafeEnvironment from "@/components/SafeEnvironment";
+import { RevelTextHorizontal } from "@/components/revelTextHorizonal";
 
 const images = {
     carouselImages: [
@@ -31,6 +32,13 @@ const images = {
         { src: "/bioware_product3.png", alt: "bioware product image", name: "COMPARTMENT PLATES" },
         { src: "/bioware_product4.png", alt: "bioware product image", name: "FOOD CONTAINER" },
         { src: "/bioware_product5.png", alt: "bioware product image", name: "TAKEAWAY CLAMSHELL" },
+    ],
+    gridIndustries: [
+        { src: "/img1_hotel.png", alt: "hotel image", name: "HOTELS" },
+        { src: "/img2_restaurant.png", alt: "restaurant image", name: "RESTAURANTS" },
+        { src: "/img3_caterers.png", alt: "caterers image", name: "CATERERS" },
+        { src: "/img4_hospital.png", alt: "hospital image", name: "HOSPITALS" },
+        { src: "/img5_supermarket.png", alt: "supermarket image", name: "SUPERMARKETS" },
     ],
 }
 
@@ -131,6 +139,21 @@ const BiowareHome = () => {
                 </div>
             </div>
             <SafeEnvironment />
+            <div className="flex flex-col items-center gap-20 my-32">
+                <RevelTextHorizontal className="flex flex-col items-center text-4xl self-center text-center px-10 border-b-4 border-primary2 pb-4">
+                    Industries We Serve                
+                </RevelTextHorizontal>
+                <div className="grid grid-cols-5 gap-8">
+                    {images.gridIndustries.map((item, index) => {
+                        return (
+                            <div className="bg-primary2 py-5 px-11 flex flex-col items-center gap-5" key={index}>
+                                <span className="text-white">{item.name}</span>
+                                <img alt={item.alt} src={item.src} className="w-32 h-32" />
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
         </>
     )
 }

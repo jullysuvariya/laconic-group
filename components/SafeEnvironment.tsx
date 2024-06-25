@@ -25,7 +25,7 @@ const environment = [
 const SafeEnvironment = () => {
 
     return (
-        <div className="flex flex-col gap-6 mb-24">
+        <div className="flex flex-col gap-6">
             {environment.map((item, index) => {
                 return (
                     <div
