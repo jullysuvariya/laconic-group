@@ -23,7 +23,7 @@ const purposes = [
     {
         "icon": "/value_bioware.svg",
         "title": "Our Values",
-        "description": "Laconic Group stands for impeccable quality. Our products undergo rigorous quality assurance " +
+        "description": "Laconic Bioware stands for impeccable quality. Our products undergo rigorous quality assurance " +
             "processes to ensure durability and aesthetic appeal. Embracing creativity, we continuously explore new designs " +
             "and patterns to stay ahead in the dynamic world."
     }
