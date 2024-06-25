@@ -44,7 +44,7 @@ const CompanyPurpose = () => {
             >
                 {purposes.map((purpose) => {
                     return <Card title={purpose.title} description={purpose.description} key={purpose.title}
-                        icon={purpose.icon} />
+                        icon={purpose.icon} borderColor='primary'/>
                 })}
             </ul>
         </div>

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { RevelImage } from "./RevealImage";
 
-const Card = ({ title, description, icon }: { title: string, description: string, icon: string }) => {
+const Card = ({ title, description, icon, borderColor }: { title: string, description: string, icon: string, borderColor: string }) => {
     const childMotion = {
         hover: {
             scale: 1.05,
@@ -13,7 +13,7 @@ const Card = ({ title, description, icon }: { title: string, description: string
         <motion.div
             key={title}
             whileHover="hover"
-            className="group flex items-center flex-col rounded-2xl border-primary border px-8 lg:px-20 py-10"
+            className={`group flex items-center flex-col rounded-2xl border-${borderColor} border px-8 lg:px-20 py-10`}
             variants={childMotion}
         >
             <li key={title} className="">

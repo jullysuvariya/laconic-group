@@ -7,21 +7,21 @@ import Card from "@/components/Card";
 
 const purposes = [
     {
-        "icon": "/vision_icon.svg",
+        "icon": "/vision_bioware.svg",
         "title": "Our Vision",
         "description": "To satisfy our customers with great and value proposition driven by continuous improvements " +
             "in creativity, innovation, efficiency, and customer service. To constantly upgrade our technology and conduct " +
             "research and development to innovate different designs."
     },
     {
-        "icon": "/mision_icon.svg",
+        "icon": "/mision_bioware.svg",
         "title": "Our Mission",
         "description": "To design and manufacture the product from our manufacturing unit to become the market " +
             "and brand leader in the various sectors. To continue to provide unrivaled service and exceptional value " +
             "for money to our growing customer base."
     },
     {
-        "icon": "/value.svg",
+        "icon": "/value_bioware.svg",
         "title": "Our Values",
         "description": "Laconic Group stands for impeccable quality. Our products undergo rigorous quality assurance " +
             "processes to ensure durability and aesthetic appeal. Embracing creativity, we continuously explore new designs " +
@@ -121,7 +121,7 @@ const BiowareAbout = () => {
                 >
                     {purposes.map((purpose) => {
                         return <Card title={purpose.title} description={purpose.description} key={purpose.title}
-                            icon={purpose.icon} />
+                            icon={purpose.icon} borderColor="primary2"/>
                     })}
                 </ul>
             </div>
