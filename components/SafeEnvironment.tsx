@@ -35,9 +35,10 @@ const SafeEnvironment = () => {
                         <div className="w-4/5 lg:w-2/5 2xl:w-2/6 h-96 flex">
                             <RevelImgHorizontal src={item.image} className="w-full object-fill" reverseDirection={index % 2 != 0} />
                         </div>
-                        <div className="flex flex-col justify-center w-2/5 px-10 h-96 bg-primary2 text-white">
-                            <RevelDivHorizontal
-                                reverseDirection={index % 2 == 0}
+                        <RevelDivHorizontal
+                            reverseDirection={index % 2 == 0}
+                            className="flex flex-col justify-center w-2/5 px-10 h-96 bg-primary2 text-white">
+                            <div
                                 className="flex flex-col justify-center gap-8">
                                 <div className="flex flex-col max-lg:text-center gap-1 lg:gap-2">
                                     <h1 className="font-thin text-sm" >{item.subtitle}</h1>
@@ -47,13 +48,12 @@ const SafeEnvironment = () => {
                                 <p className="lg:text-base max-lg:text-center">
                                     {item.description}
                                 </p>
-
-                            </RevelDivHorizontal>
-                        </div>
+                            </div>
+                        </RevelDivHorizontal>
                     </div>
                 )
             })}
-        </div>
+        </div >
     )
 
 }
