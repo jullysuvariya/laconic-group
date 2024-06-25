@@ -11,7 +11,7 @@ const contactDetails = [
         icon: <MdLocationOn className="flex-shrink-0 w-14 h-14 text-primary2" />,
         title: <strong className="text-2xl mt-2 text-center">Corporate Office</strong>,
         description: <a href=" https://maps.app.goo.gl/brrKRHg4xWnQoBX68" target={"_blank"} className="text-base font-thin m-auto text-center hover:text-primary2 transform transition-transform hover:translate-x-0 hover:scale-105">
-            525, Nakshtra VIII, Sadhu Vasvani Road, Rajkot - 360005, Gujarat, India.
+            Manufacturing Unit - 8-A, National Highway, Opp. Rolex Minerals, At New Jambudia (Morbi) - 363642, Gujarat, INDIA.
         </a >,
     },
     {
