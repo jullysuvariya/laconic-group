@@ -65,23 +65,23 @@ const BiowareHome = () => {
                         )
                     })}
                 </Carousel >
-                <div className="flex flex-row relative items-center">
-                    <div className="max-lg:hidden absolute z-10 mr-12 translate-x-10">
-                        <img src="/bioware_1.jpeg" alt="bioware image" className="w-[91%]" />
+                <div className="flex flex-row items-center justify-center w-full pr-20 2xl:pr-0">
+                    <div className="max-lg:hidden z-10 flex justify-end">
+                        <img src="/bioware_1.jpeg" alt="bioware image" className="" />
                     </div>
-                    <div className="bg-primary2 max-lg:px-10 py-12 lg:pl-48 lg:pr-10 flex flex-col text-white gap-7 w-full lg:w-[60%] lg:translate-x-[53%]">
+                    <div className="bg-primary2 max-lg:px-10 py-12 lg:pl-48 lg:pr-10 flex flex-col text-white gap-7 w-full lg:w-[60%] -ml-40">
                         <div className="max-lg:text-center">
                             <h6 className="mb-1">ABOUT US</h6>
                             <h1 className="text-3xl font-semibold">WELCOME TO LACONIC BIOWARE</h1>
                         </div>
-                        <p className="text-base font-light">
+                        <p className="text-base font-light 2xl:text-lg">
                             Laconic Bioware is eco- friendly best baggase product manufacturer in India that specializes
                             in producing high-quality, eco-friendly plates for both personal and commercial use. We make
                             sustainable tableware products that are 100% eco-friendly and biodegradable. Our company is
                             committed to using sustainable materials and processes in all aspects of our business, from
                             sourcing our raw materials to packaging and shipping our products.
                         </p>
-                        <p className="text-base font-light">
+                        <p className="text-base font-light 2xl:text-lg">
                             Our team is made up of experienced professionals who are passionate about creating products that
                             not only meet the needs of customers but also protect the environment. We take pride in the fact
                             that our plates are biodegradable, meaning they can be safely broken down and returned to the
