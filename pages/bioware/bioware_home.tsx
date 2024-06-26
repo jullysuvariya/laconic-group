@@ -65,11 +65,11 @@ const BiowareHome = () => {
                         )
                     })}
                 </Carousel >
-                <div className="flex flex-row items-center justify-center w-full pr-20 2xl:pr-0">
+                <div className="flex flex-row items-center justify-center w-full lg:pr-20 2xl:pr-0">
                     <div className="max-lg:hidden z-10 flex justify-end">
                         <img src="/bioware_1.jpeg" alt="bioware image" className="" />
                     </div>
-                    <div className="bg-primary2 max-lg:px-10 py-12 lg:pl-48 lg:pr-10 flex flex-col text-white gap-7 w-full lg:w-[60%] -ml-40">
+                    <div className="bg-primary2 max-lg:px-10 py-12 lg:pl-48 lg:pr-10 flex flex-col text-white gap-7 w-full lg:w-[60%] lg:-ml-40">
                         <div className="max-lg:text-center">
                             <h6 className="mb-1">ABOUT US</h6>
                             <h1 className="text-3xl font-semibold">WELCOME TO LACONIC BIOWARE</h1>
