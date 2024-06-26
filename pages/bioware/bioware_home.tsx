@@ -45,7 +45,7 @@ const images = {
 const BiowareHome = () => {
     return (
         <>
-            <div className="flex flex-col gap-20 justify-center items-center">
+            <div className="flex flex-col lg:gap-20 justify-center items-center">
                 <Carousel
                     className="w-full"
                     autoPlay={true}
@@ -65,12 +65,12 @@ const BiowareHome = () => {
                         )
                     })}
                 </Carousel >
-                <div className="flex flex-row relative">
-                    <div className="absolute z-10 mr-12 translate-y-1/2 translate-x-10">
+                <div className="flex flex-row relative items-center">
+                    <div className="max-lg:hidden absolute z-10 mr-12 translate-x-10">
                         <img src="/bioware_1.jpeg" alt="bioware image" className="w-[91%]" />
                     </div>
-                    <div className="bg-primary2 py-12 pl-48 pr-10 flex flex-col text-white gap-7 w-[60%] translate-x-[53%]">
-                        <div>
+                    <div className="bg-primary2 max-lg:px-10 py-12 lg:pl-48 lg:pr-10 flex flex-col text-white gap-7 w-full lg:w-[60%] lg:translate-x-[53%]">
+                        <div className="max-lg:text-center">
                             <h6 className="mb-1">ABOUT US</h6>
                             <h1 className="text-3xl font-semibold">WELCOME TO LACONIC BIOWARE</h1>
                         </div>
@@ -87,28 +87,28 @@ const BiowareHome = () => {
                             that our plates are biodegradable, meaning they can be safely broken down and returned to the
                             earth without causing harm.
                         </p>
-                        <button className="bg-white text-primary2 px-6 py-2 w-fit rounded-md mt-6">Read More</button>
+                        <button className="bg-white text-primary2 px-6 py-2 w-fit rounded-md mt-6 max-lg:self-center">Read More</button>
                     </div>
                 </div>
                 <div className="my-24 relative flex flex-col">
-                    <div className="grid grid-cols-4 gap-4 px-2">
+                    <div className="grid grid-rows-4 lg:grid-cols-4 lg:grid-rows-1 gap-4 px-2">
                         {images.gridImages.map((item, index) => {
                             return (
-                                <div className={`z-10 ${index % 2 == 0 ? "translate-y-[15%]" : " "}`} key={index}>
-                                    <img alt={item.alt} src={item.src} />
+                                <div className={`w-full flex flex-col items-center z-10 ${index % 2 == 0 ? "lg:translate-y-[15%]" : " "}`} key={index}>
+                                    <img alt={item.alt} src={item.src} className={`w-1/2 sm:w-2/3 lg:w-full `} />
                                 </div>
                             )
                         })}
                     </div>
-                    <div className="bg-primary2 text-center text-white pt-72 pb-44 gap-8 flex flex-col -my-28 ">
+                    <div className="bg-primary2 text-center text-white pt-40 pb-20 lg:pt-72 lg:pb-44 gap-8 flex flex-col -my-28">
                         <h6 className="text-4xl font-semibold">Our Product</h6>
-                        <p className="text-base font-light px-64">
+                        <p className="text-base font-light lg:px-64 px-8">
                             Laconic is more than just a tableware baggase products manufacturer. We are a team of individuals
                             who are passionate about the environment and committed to finding sustainable solutions for
                             everyday needs.
                         </p>
                     </div>
-                    <div className="bg-gray-100 border-solid border mx-40 px-3 py-12 grid grid-cols-6 items-center">
+                    <div className="hidden lg:bg-gray-100 lg:border-solid lg:border lg:mx-40 lg:px-3 lg:py-12 lg:grid lg:grid-cols-6 lg:tems-center">
                         {images.gridProductsBagasse.map((item, index) => {
                             return (
                                 <div className="flex justify-center" key={index}>
@@ -117,16 +117,14 @@ const BiowareHome = () => {
                             )
                         })}
                     </div>
-                    <div className="grid grid-cols-3 grid-rows-2 px-40 mt-20 gap-y-14 justify-items-center">
+                    <div className="mt-48 grid grid-rows-5 lg:grid-cols-3 lg:grid-rows-2 lg:px-40 lg:mt-20 gap-y-14 justify-items-center">
                         {images.gridProducts.map((item, index) => {
                             return (
-                                <div className="bg-primary2 w-80 h-36 rounded-tl-xl rounded-b-[70px] rounded-tr-[95px] flex flex-row items-center"
+                                <div className="bg-primary2 relative w-80 h-36 rounded-tl-xl rounded-b-[70px] rounded-tr-[95px] flex flex-row items-center justify-center"
                                     key="index"
                                 >
-                                    <div className="w-1/2 text-center">
-                                        <span className="text-white font-bold text-xl">{item.name}</span>
-                                    </div>
-                                    <img src={item.src} alt={item.alt} className="w-32 h-32 self-start ml-10 -translate-y-5" />
+                                    <span className="text-white font-bold text-xl mt-10">{item.name}</span>
+                                    <img src={item.src} alt={item.alt} className="absolute w-40 h-24 ml-44 mb-20" />
                                 </div>
                             )
                         })}
@@ -139,11 +137,11 @@ const BiowareHome = () => {
                 </div>
             </div>
             <SafeEnvironment />
-            <div className="flex flex-col items-center gap-20 my-32">
-                <RevelTextHorizontal className="flex flex-col items-center text-4xl self-center text-center px-10 border-b-4 border-primary2 pb-4">
-                    Industries We Serve                
+            <div className="flex flex-col items-center gap-16 lg:gap-20 my-32">
+                <RevelTextHorizontal className="flex flex-col items-center text-4xl self-center text-center px-8 lg:px-10 border-b-4 border-primary2 pb-4">
+                    Industries We Serve
                 </RevelTextHorizontal>
-                <div className="grid grid-cols-5 gap-8">
+                <div className="grid grid-rows-5 lg:grid-cols-5 lg:grid-rows-1 gap-8">
                     {images.gridIndustries.map((item, index) => {
                         return (
                             <div className="bg-primary2 py-5 px-11 flex flex-col items-center gap-5" key={index}>
