@@ -106,7 +106,7 @@ const BiowareAbout = () => {
                 </RevelTextVertical>
             </div>
 
-            <div className="px-16 lg:px-32 justify-center my-16 mb-28 lg:my-24 flex flex-col gap-4">
+            <div className="px-16 lg:px-32 justify-center my-10 mb-24 lg:my-24 flex flex-col gap-4">
 
                 <RevelDivHorizontal className="flex flex-col items-center gap-4">
                     <h6 className="self-center text-base lg:text-3xl font-light">Our</h6>
