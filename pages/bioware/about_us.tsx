@@ -46,7 +46,7 @@ const BiowareAbout = () => {
 
     return (
         <div className="flex flex-col justify-between">
-            <div className="relative flex items-center justify-center bg-fixed h-96 bg-parallax bg-cover lg:mt-24 opacity-70">
+            <div className="relative flex items-center justify-center bg-fixed h-[30rem] bg-parallaxBio bg-cover lg:mt-24 opacity-90">
                 <div className="w-full h-full bg-black bg-opacity-50" />
                 <RevelTextVertical className="absolute z-20 text-5xl lg:text-7xl text-white font-extrabold">
                     ABOUT US

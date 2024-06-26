@@ -79,7 +79,7 @@ const Contact = () => {
 
     return (
         <div className="flex flex-col justify-between gap-20 lg:mb-32 mb-24">
-            <div className="relative flex items-center justify-center bg-fixed h-96 bg-parallax bg-cover lg:mt-24 opacity-70">
+            <div className="relative flex items-center justify-center bg-fixed h-[30rem] bg-parallax bg-cover lg:mt-24 opacity-70">
                 <div className="w-full h-full bg-black bg-opacity-50" />
                 <RevelTextVertical className="absolute z-20 text-5xl lg:text-7xl text-white font-extrabold">
                     CONTACT US

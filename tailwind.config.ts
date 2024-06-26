@@ -42,6 +42,7 @@ const config: Config = {
             },
             backgroundImage: {
                 "parallax" : 'url("../public/contactUs.jpg")',
+                "parallaxBio": 'url("../public/bioware_about.jpg")'
             },
             colors: {
                 "primary": {
