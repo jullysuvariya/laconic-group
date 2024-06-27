@@ -93,7 +93,7 @@ const BiowareHome = () => {
                             that our plates are biodegradable, meaning they can be safely broken down and returned to the
                             earth without causing harm.
                         </p>
-                        <button className="bg-white text-primary2 px-6 py-2 w-fit rounded-md mt-6 max-lg:self-center">Read More</button>
+                        <button className="bg-white text-primary2 px-6 py-2 w-fit rounded-md mt-6 max-lg:self-center transform transition-transform hover:-translate-y-1 hover:scale-105">Read More</button>
                     </RevelDivHorizontal>
                 </div>
                 <div className="my-24 relative flex flex-col">

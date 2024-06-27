@@ -76,7 +76,7 @@ const Header = ({ aboutUsURL } : { aboutUsURL: string }) => {
                                     <a
                                         key={item.name}
                                         href={item.href}
-                                        className="block py-2 px-4 rounded-lg hover:bg-primary hover:bg-opacity-5 text-sm font-medium leading-6 text-primary hover:text-opacity-60"
+                                        className="block py-2 px-4 rounded-lg hover:bg-primary hover:bg-opacity-5 text-sm font-medium leading-6 text-primary hover:text-opacity-60 transform transition-transform hover:-translate-y-1 hover:scale-105"
                                     >
                                         {item.name}
                                     </a>
