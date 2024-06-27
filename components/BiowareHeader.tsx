@@ -110,7 +110,7 @@ const BiowareHeader = () => {
                             <div className="py-6">
                                 <a
                                     href="tel:919429653388"
-                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-primary2 hover:bg-primar hover:bg-opacity-5 hover:text-opacity-60"
+                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-primary2 hover:bg-primary2 hover:bg-opacity-5 hover:text-opacity-60"
                                 >
                                     Call Us
                                 </a>

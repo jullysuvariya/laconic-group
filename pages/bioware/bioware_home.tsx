@@ -118,7 +118,7 @@ const BiowareHome = () => {
                         {images.gridProductsBagasse.map((item, index) => {
                             return (
                                 <div className="flex justify-center" key={index}>
-                                    <img alt={item.alt} src={item.src} className="w-11/12 h-11/12" />
+                                    <img alt={item.alt} src={item.src} className="w-11/12 h-11/12 transform transition-transform hover:-translate-y-1 hover:scale-110" />
                                 </div>
                             )
                         })}
@@ -126,16 +126,16 @@ const BiowareHome = () => {
                     <div className="mt-48 grid grid-rows-5 lg:grid-cols-3 lg:grid-rows-2 lg:px-40 lg:mt-20 gap-y-14 justify-items-center">
                         {images.gridProducts.map((item, index) => {
                             return (
-                                <div className="bg-primary2 relative w-80 h-36 rounded-tl-xl rounded-b-[70px] rounded-tr-[95px] flex flex-row items-center justify-center"
+                                <div className="bg-primary2 relative w-80 h-36 rounded-tl-xl rounded-b-[70px] rounded-tr-[95px] flex flex-row hover:bg-opacity-90 hover:shadow-xl items-center justify-center transform transition-transform hover:-translate-y-1 hover:scale-105"
                                     key="index"
                                 >
                                     <span className="text-white font-bold text-xl mt-10">{item.name}</span>
-                                    <img src={item.src} alt={item.alt} className="absolute w-40 h-24 ml-44 mb-20" />
+                                    <img src={item.src} alt={item.alt} className="absolute w-40 h-24 ml-44 mb-20 transform transition-transform hover:-translate-y-1 hover:scale-110" />
                                 </div>
                             )
                         })}
                     </div>
-                    <button className="bg-primary2 text-white px-20 py-2 rounded-md mt-16 w-fit self-center">
+                    <button className="bg-primary2 text-white px-20 py-2 rounded-md mt-16 w-fit self-center hover:bg-opacity-85 transform transition-transform hover:-translate-y-1 hover:scale-105">
                         <a href="/Laconic Biowares Catalog - Laconic Group.pdf" download="Laconic Biowares Catalog - Laconic Group.pdf" target="_blank">
                             <div className="flex items-baseline gap-2" ><FaDownload /> Download Catalog </div>
                         </a>
@@ -150,10 +150,10 @@ const BiowareHome = () => {
                 <div className="grid grid-rows-5 lg:grid-cols-5 lg:grid-rows-1 gap-8">
                     {images.gridIndustries.map((item, index) => {
                         return (
-                            <RevelGrid className="bg-primary2 py-5 px-11 flex flex-col items-center gap-5" key={index}>
+                            <div className="bg-primary2 py-5 px-11 flex flex-col items-center gap-5 transform transition-transform hover:-translate-y-1 hover:scale-105" key={index}>
                                 <span className="text-white">{item.name}</span>
-                                <img alt={item.alt} src={item.src} className="w-32 h-32" />
-                            </RevelGrid>
+                                <img alt={item.alt} src={item.src} className="w-32 h-32 transform transition-transform hover:-translate-y-1 hover:scale-110" />
+                            </div>
                         )
                     })}
                 </div>
