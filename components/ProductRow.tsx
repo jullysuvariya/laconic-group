@@ -22,7 +22,7 @@ const ProductRow = (props: ProductRowProps) => {
         <div
             className={`flex flex-col lg:h-full w-full items-center justify-center py-10 lg:gap-10 ${props.reverseRow ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
             <div className={`w-4/5 lg:w-2/5 2xl:w-2/6 max-lg:z-10 lg:h-full lg:flex ${props.reverseRow ? 'justify-start' : 'justify-end'}`}>
-                <RevelImgHorizontal src={props.image} className="lg:h-full object-contain rounded-2xl" reverseDirection={props.reverseRow} />
+                <RevelImgHorizontal src={props.image} alt="product image" className="lg:h-full object-contain rounded-2xl" reverseDirection={props.reverseRow} />
             </div>
             <div className="w-full flex flex-col justify-center lg:w-3/5 2xl:w-4/6 p-12 lg:p-16 max-lg:-mt-8 bg-gray-100 rounded-2xl lg:my-10 lg:h-full">
                 <RevelDivHorizontal

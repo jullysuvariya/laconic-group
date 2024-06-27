@@ -7,18 +7,21 @@ const environment = [
         title: "Made From Bagasse",
         description: "Sugarcane Bagasse could be a stringy by-product of sugar industry. The husk which is cleared out after the juice has been extricated from the sugarcane. It’s natural properties make it a extraordinary crude fabric for making flatware items such as bowls, plates, takeaway holders. Bagasse is additionally a idealize substitution for plastics & paper in retail bundling.",
         image: "/bagasse.jpg",
+        alt: "image1",
     },
     {
         subtitle: "NATURAL RAW MATERIALS",
         title: "Certified Food Safe",
         description: "As an critical connect of the nourishment industry, we get it our ‘shared responsibility’ towards nourishment security and recognize the coordinate affiliation of nourishment serving & bundling holders with the quality and security of nourishment. All our items routinely experience thorough tests with universal compliance measures to guarantee they are nourishment secure.",
         image: "/foodSafe.jpg",
+        alt: "image2",
     },
     {
         subtitle: "NO PLASTIC IS FANTASTIC",
         title: "Say No To Plastics",
         description: "Plastic isn’t biodegradable and does not go absent; It’ll take hundreds of a long time for a single piece of plastic to break down, and after that it’ll turn into a perilous microplastic. Avoiding plastic could be a way better arrangement than reusing as the reusing handle too is carbon seriously.",
         image: "/plastics.jpeg",
+        alt: "image3",
     },
 ]
 
@@ -33,7 +36,7 @@ const SafeEnvironment = () => {
                         key={index}
                     >
                         <div className="w-full lg:w-2/5 2xl:w-2/6 h-96 flex">
-                            <RevelImgHorizontal src={item.image} className="w-full object-fill" reverseDirection={index % 2 != 0} />
+                            <RevelImgHorizontal src={item.image} alt={item.alt} className="w-full object-fill" reverseDirection={index % 2 != 0} />
                         </div>
                         <RevelDivHorizontal
                             reverseDirection={index % 2 == 0}

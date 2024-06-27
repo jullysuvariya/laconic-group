@@ -5,6 +5,11 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { FaDownload } from "react-icons/fa";
 import SafeEnvironment from "@/components/SafeEnvironment";
 import { RevelTextHorizontal } from "@/components/revelTextHorizonal";
+import { RevelImgHorizontal } from "@/components/revealImageHorizontal";
+import { RevelDivHorizontal } from "@/components/revealDivHorizontal";
+import { RevelDivVertical } from "@/components/RevelDivVertical";
+import { RevelImgVertical } from "@/components/RevelImageVertical";
+import { RevelGrid } from "@/components/RevelGrid";
 
 const images = {
     carouselImages: [
@@ -67,9 +72,10 @@ const BiowareHome = () => {
                 </Carousel >
                 <div className="flex flex-row items-center justify-center w-full lg:pr-20 2xl:pr-0">
                     <div className="max-lg:hidden z-10 flex justify-end">
-                        <img src="/bioware_1.jpeg" alt="bioware image" className="" />
+                        <RevelImgHorizontal src="/bioware_1.jpeg" alt="bioware image" className="" />
                     </div>
-                    <div className="bg-primary2 max-lg:px-10 py-12 lg:pl-48 lg:pr-10 flex flex-col text-white gap-7 w-full lg:w-[60%] lg:-ml-40">
+                    <RevelDivHorizontal reverseDirection={true}
+                    className="bg-primary2 max-lg:px-10 py-12 lg:pl-48 lg:pr-10 flex flex-col text-white gap-7 w-full lg:w-[60%] lg:-ml-40">
                         <div className="max-lg:text-center">
                             <h6 className="mb-1">ABOUT US</h6>
                             <h1 className="text-3xl font-semibold">WELCOME TO LACONIC BIOWARE</h1>
@@ -88,7 +94,7 @@ const BiowareHome = () => {
                             earth without causing harm.
                         </p>
                         <button className="bg-white text-primary2 px-6 py-2 w-fit rounded-md mt-6 max-lg:self-center">Read More</button>
-                    </div>
+                    </RevelDivHorizontal>
                 </div>
                 <div className="my-24 relative flex flex-col">
                     <div className="grid grid-rows-4 lg:grid-cols-4 lg:grid-rows-1 gap-4 px-2">
@@ -100,15 +106,15 @@ const BiowareHome = () => {
                             )
                         })}
                     </div>
-                    <div className="bg-primary2 text-center text-white pt-40 pb-20 lg:pt-72 lg:pb-44 gap-8 flex flex-col -my-28">
+                    <RevelDivVertical className="bg-primary2 text-center text-white pt-40 pb-20 lg:pt-72 lg:pb-44 gap-8 flex flex-col -my-28">
                         <h6 className="text-4xl font-semibold">Our Product</h6>
                         <p className="text-base font-light lg:px-64 px-8">
                             Laconic is more than just a tableware baggase products manufacturer. We are a team of individuals
                             who are passionate about the environment and committed to finding sustainable solutions for
                             everyday needs.
                         </p>
-                    </div>
-                    <div className="hidden lg:bg-gray-100 lg:border-solid lg:border lg:mx-40 lg:px-3 lg:py-12 lg:grid lg:grid-cols-6 lg:tems-center">
+                    </RevelDivVertical>
+                    <RevelDivHorizontal className="hidden lg:bg-gray-100 lg:border-solid lg:border lg:mx-40 lg:px-3 lg:py-12 lg:grid lg:grid-cols-6 lg:tems-center">
                         {images.gridProductsBagasse.map((item, index) => {
                             return (
                                 <div className="flex justify-center" key={index}>
@@ -116,7 +122,7 @@ const BiowareHome = () => {
                                 </div>
                             )
                         })}
-                    </div>
+                    </RevelDivHorizontal>
                     <div className="mt-48 grid grid-rows-5 lg:grid-cols-3 lg:grid-rows-2 lg:px-40 lg:mt-20 gap-y-14 justify-items-center">
                         {images.gridProducts.map((item, index) => {
                             return (
@@ -144,10 +150,10 @@ const BiowareHome = () => {
                 <div className="grid grid-rows-5 lg:grid-cols-5 lg:grid-rows-1 gap-8">
                     {images.gridIndustries.map((item, index) => {
                         return (
-                            <div className="bg-primary2 py-5 px-11 flex flex-col items-center gap-5" key={index}>
+                            <RevelGrid className="bg-primary2 py-5 px-11 flex flex-col items-center gap-5" key={index}>
                                 <span className="text-white">{item.name}</span>
                                 <img alt={item.alt} src={item.src} className="w-32 h-32" />
-                            </div>
+                            </RevelGrid>
                         )
                     })}
                 </div>

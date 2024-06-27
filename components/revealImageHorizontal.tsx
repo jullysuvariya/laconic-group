@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 
-export const RevelImgHorizontal = ({ src, className, reverseDirection }: { src: string, className?: string, reverseDirection?: boolean }) => {
+export const RevelImgHorizontal = ({ src, alt, className, reverseDirection }: { src: string, alt: string, className?: string, reverseDirection?: boolean }) => {
 
     const variantsLeftToRight = {
         hidden: { opacity: 0, x: -100 },
@@ -26,6 +26,7 @@ export const RevelImgHorizontal = ({ src, className, reverseDirection }: { src: 
             transition={{ duration: 1, delay: 0.5 }}
             className={className}
             src={src}
+            alt={alt}
         >
         </motion.img>
     )
