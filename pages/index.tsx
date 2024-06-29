@@ -47,7 +47,7 @@ const PRODUCTS: ProductRowProps[] = [
         description: "Our mission is to find a permanent paper solution! As pioneers in the industry, we deliver the most reliable and sustainable options for all your paper and paperboard needs.",
         image: "/paper.jpg",
         sizes: {
-            "": ["Duplex Boards (CCNB)", "Triplex Boards (Whiteback)", "Testliner & Fluting Paper", "Kraft Paper Boards", "MG Poster", "Tissue Paper"]
+            "": ["Duplex Boards (CCNB)", "Triplex Boards (Whiteback)", "Testliner & Fluting Paper", "MG Poster"]
         },
         linkHref: "https://www.enrichpapers.com/",
         linkText: "Visit Enrich Papers",
