@@ -12,21 +12,23 @@ export default function MyApp({ Component, pageProps }: { Component: any, pagePr
 
     const pathname = usePathname();
 
-    const [isLoading, setIsLoading] = useState(false);
-    const [isTimeout, setIsTimeout] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [isTimeout, setIsTimeout] = useState(pathname?.startsWith('/bioware/'));
 
-    setTimeout(() => {
-        setIsTimeout(true);
-    }, 3500);
+    if (!isTimeout) {
+        setTimeout(() => {
+            setIsTimeout(true);
+        }, 3500);
+    }
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            setIsLoading(true);
+            setIsLoaded(true);
         }
     }, []);
 
     useEffect(() => {
-        if (isLoading && isTimeout) {
+        if (isLoaded && isTimeout) {
             const loader = document.getElementById('globalLoader');
             if (loader) {
                 loader.addEventListener('animationend', () => {
@@ -34,7 +36,7 @@ export default function MyApp({ Component, pageProps }: { Component: any, pagePr
                 });
             }
         }
-    }, [isLoading, isTimeout]);
+    }, [isLoaded, isTimeout]);
 
     useEffect(() => {
         window.onload = function () {
@@ -72,11 +74,13 @@ export default function MyApp({ Component, pageProps }: { Component: any, pagePr
     }
     return (
         <>
-            <div id="globalLoader" className={`fixed z-50 bg-primary-500 w-full h-screen ${isLoading && isTimeout && 'animate-slideout'}`}>
-                <div className="w-full h-full bg-primary flex items-center justify-center animate-slidein">
-                    <TextShimmerDemo />
+            { (!isLoaded || !isTimeout) &&
+                <div id="globalLoader" className={`fixed z-50 bg-primary-500 w-full h-screen ${isLoaded && isTimeout && 'animate-slideout'}`}>
+                    <div className="w-full h-full bg-primary flex items-center justify-center animate-slidein">
+                        <TextShimmerDemo />
+                    </div>
                 </div>
-            </div>
+            }
             <LaconicCompanyLayout>
                 <ToastContainer
                     position="top-right"

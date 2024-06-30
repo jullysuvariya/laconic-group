@@ -7,10 +7,7 @@ export default function Layout({ children }: { children: ReactNode | ReactNode[]
 
     const [isAnimatingOut, setIsAnimatingOut] = useState(false);
 
-    console.log("coming here 1");
-
     useEffect(() => {
-        console.log("coming here 2")
         if (typeof window !== 'undefined') {
             setIsAnimatingOut(true);
         }
