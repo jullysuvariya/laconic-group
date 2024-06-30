@@ -96,7 +96,7 @@ const BiowareContact = () => {
                     </p>
                 </RevelTextVertical>
             </div>
-            <div className="py-12 w-full bg-gray-100 flex lg:flex-row flex-col justify-center items-center">
+            <div className="py-12 w-full bg-gray-100 flex lg:flex-row flex-col justify-center items-center overflow-x-hidden">
                 <motion.div className="grid max-lg:grid-cols-1 grid-cols-3 px-16 lg:px-48 max-lg:gap-14"
                     variants={container}
                     initial="hidden"
