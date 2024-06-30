@@ -12,16 +12,21 @@ export default function MyApp({ Component, pageProps }: { Component: any, pagePr
 
     const pathname = usePathname();
 
-    const [isAnimatingOut, setIsAnimatingOut] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [isTimeout, setIsTimeout] = useState(false);
+
+    setTimeout(() => {
+        setIsTimeout(true);
+    }, 3500);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            setIsAnimatingOut(true);
+            setIsLoading(true);
         }
     }, []);
 
     useEffect(() => {
-        if (isAnimatingOut) {
+        if (isLoading && isTimeout) {
             const loader = document.getElementById('globalLoader');
             if (loader) {
                 loader.addEventListener('animationend', () => {
@@ -29,7 +34,7 @@ export default function MyApp({ Component, pageProps }: { Component: any, pagePr
                 });
             }
         }
-    }, [isAnimatingOut]);
+    }, [isLoading, isTimeout]);
 
     useEffect(() => {
         window.onload = function () {
@@ -67,7 +72,7 @@ export default function MyApp({ Component, pageProps }: { Component: any, pagePr
     }
     return (
         <>
-            <div id="globalLoader" className={`fixed z-50 bg-primary-500 w-full h-screen ${isAnimatingOut && 'animate-slideout'}`}>
+            <div id="globalLoader" className={`fixed z-50 bg-primary-500 w-full h-screen ${isLoading && isTimeout && 'animate-slideout'}`}>
                 <div className="w-full h-full bg-primary flex items-center justify-center animate-slidein">
                     <TextShimmerDemo />
                 </div>
